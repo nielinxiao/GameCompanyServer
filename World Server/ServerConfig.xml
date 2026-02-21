@@ -1,0 +1,7 @@
+<ServerConfig>
+  <containerCount>3</containerCount>
+  <maxCount>10</maxCount>
+  <signPort>45454</signPort>
+  <mainPort>25656</mainPort>
+  <serverip>0.0.0.0</serverip>
+</ServerConfig>

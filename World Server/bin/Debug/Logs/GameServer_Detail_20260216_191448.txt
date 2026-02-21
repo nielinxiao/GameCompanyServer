@@ -1,0 +1,56 @@
+﻿[2026-02-16 19:14:48.918] [INFO] ========================================
+[2026-02-16 19:14:48.918] [INFO] GameCompany 服务端详细日志
+[2026-02-16 19:14:48.918] [INFO] 日志文件: Logs\GameServer_Detail_20260216_191448.txt
+[2026-02-16 19:14:48.918] [INFO] 开始时间: 2026-02-16 19:14:48
+[2026-02-16 19:14:48.918] [INFO] ========================================
+[2026-02-16 19:14:48.918] [INFO] 
+[2026-02-16 19:14:48.918] [INFO] LocalDataStorage 初始化开始
+[2026-02-16 19:14:48.918] [INFO] 数据目录: Data
+[2026-02-16 19:14:48.918] [INFO] 保存模式: Instant
+[2026-02-16 19:14:48.918] [INFO] 保存间隔: 24小时
+[2026-02-16 19:14:48.966] [INFO] [LocalStorage] 加载String数据成功: 1 条记录
+[2026-02-16 19:14:48.966] [INFO] [LocalStorage]   - Key: money, Value长度: 4
+[2026-02-16 19:14:48.966] [INFO] [LocalStorage] Hash文件读取成功，JSON长度: 22434字符
+[2026-02-16 19:14:48.978] [INFO] [LocalStorage] JSON反序列化成功，发现 3 个顶层键
+[2026-02-16 19:14:48.978] [INFO] [LocalStorage]   [已加载] Hash表: company, 字段数: 1
+[2026-02-16 19:14:48.979] [INFO] [LocalStorage]   [已加载] Hash表: player:UPgCmpna6seyUOJFkbo+Fw==, 字段数: 3
+[2026-02-16 19:14:48.979] [INFO] [LocalStorage]   [已加载] Hash表: UPgCmpna6seyUOJFkbo+Fw==, 字段数: 5
+[2026-02-16 19:14:48.979] [INFO] [LocalStorage] 加载Hash数据成功: 3 个Hash表（JSON顶层键: 3, 跳过: 0）
+[2026-02-16 19:14:48.979] [INFO] [LocalStorage] === 内存中的Hash表最终列表 ===
+[2026-02-16 19:14:48.979] [INFO] [LocalStorage]   - Hash表: company, 字段数: 1
+[2026-02-16 19:14:48.979] [INFO] [LocalStorage]   - Hash表: player:UPgCmpna6seyUOJFkbo+Fw==, 字段数: 3
+[2026-02-16 19:14:48.979] [INFO] [LocalStorage]   - Hash表: UPgCmpna6seyUOJFkbo+Fw==, 字段数: 5
+[2026-02-16 19:14:52.058] [INFO] [LocalStorage] HashSet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block, Value长度: 130
+[2026-02-16 19:14:52.058] [INFO] [LocalStorage] HashSet Value预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":1.25,"y":0.05,"z":-2.5},"quaternionJson":{"x":0,"y":0,"z":0...
+[2026-02-16 19:14:52.058] [INFO] [LocalStorage] HashSet 写入内存成功 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block, 该Hash表有 5 个字段, 内存中共有 3 个Hash表
+[2026-02-16 19:14:52.058] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-16 19:14:52.059] [INFO] [LocalStorage] ====================================
+[2026-02-16 19:14:52.059] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 19:14:52.059] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 19:14:52.059] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 19:14:52.059] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 19:14:52.059] [INFO] [LocalStorage]   Hash表数: 3
+[2026-02-16 19:14:52.066] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 19:14:52.066] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 19:14:52
+[2026-02-16 19:14:52.066] [INFO] [LocalStorage] ====================================
+[2026-02-16 19:14:52.066] [INFO] [LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[2026-02-16 19:14:52.066] [INFO] [LocalStorage] HashSet 返回 - Success: True, SaveMode: Instant
+[2026-02-16 19:14:52.069] [INFO] [LocalStorage] HashGet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block
+[2026-02-16 19:14:52.069] [INFO] [LocalStorage] HashGet 命中 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block, Value长度: 130
+[2026-02-16 19:14:52.069] [INFO] [LocalStorage] HashGet Value预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":1.25,"y":0.05,"z":-2.5},"quaternionJson":{"x":0,"y":0,"z":0...
+[2026-02-16 19:15:05.828] [INFO] [LocalStorage] HashSet 调用 - Key: , Field: , Value长度: 0
+[2026-02-16 19:15:05.829] [INFO] [LocalStorage] HashSet 写入内存成功 - Key: , Field: , 该Hash表有 1 个字段, 内存中共有 4 个Hash表
+[2026-02-16 19:15:05.829] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-16 19:15:05.829] [INFO] [LocalStorage] ====================================
+[2026-02-16 19:15:05.829] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 19:15:05.829] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 19:15:05.829] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 19:15:05.829] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 19:15:05.829] [INFO] [LocalStorage]   Hash表数: 4
+[2026-02-16 19:15:05.831] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 19:15:05.831] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 19:15:05
+[2026-02-16 19:15:05.831] [INFO] [LocalStorage] ====================================
+[2026-02-16 19:15:05.831] [INFO] [LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[2026-02-16 19:15:05.832] [INFO] [LocalStorage] HashSet 返回 - Success: True, SaveMode: Instant
+[2026-02-16 19:15:05.833] [INFO] [LocalStorage] HashGet 调用 - Key: , Field: 
+[2026-02-16 19:15:05.834] [INFO] [LocalStorage] HashGet 命中 - Key: , Field: , Value长度: 0

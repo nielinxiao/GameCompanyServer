@@ -1,0 +1,16 @@
+﻿[2026-02-15 22:13:02.787] [INFO] ========================================
+[2026-02-15 22:13:02.787] [INFO] GameCompany 服务端详细日志
+[2026-02-15 22:13:02.787] [INFO] 日志文件: Logs\GameServer_Detail_20260215_221302.txt
+[2026-02-15 22:13:02.787] [INFO] 开始时间: 2026-02-15 22:13:02
+[2026-02-15 22:13:02.787] [INFO] ========================================
+[2026-02-15 22:13:02.787] [INFO] 
+[2026-02-15 22:13:02.787] [INFO] LocalDataStorage 初始化开始
+[2026-02-15 22:13:02.787] [INFO] 数据目录: Data
+[2026-02-15 22:13:02.787] [INFO] 保存模式: Instant
+[2026-02-15 22:13:02.787] [INFO] 保存间隔: 24小时
+[2026-02-15 22:13:02.833] [INFO] [LocalStorage] 加载String数据成功: 3 条记录
+[2026-02-15 22:13:02.834] [INFO] [LocalStorage]   - Key: company, Value长度: 219
+[2026-02-15 22:13:02.834] [INFO] [LocalStorage]   - Key: money, Value长度: 4
+[2026-02-15 22:13:02.834] [INFO] [LocalStorage]   - Key: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 26
+[2026-02-15 22:13:02.835] [INFO] [LocalStorage] 加载Hash数据成功: 1 个Hash表
+[2026-02-15 22:13:02.836] [INFO] [LocalStorage]   - Hash表: player:UPgCmpna6seyUOJFkbo+Fw==, 字段数: 3

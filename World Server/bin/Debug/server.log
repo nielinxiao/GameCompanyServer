@@ -1,0 +1,452 @@
+========================================
+GameCompany 服务端启动
+启动时间: 2026-02-16 19:16:41
+========================================
+
+[INFO] [2026/2/16 19:16:41]:LogTools Loading Successfull...
+[INFO] [2026/2/16 19:16:41]:TimerSvc Loading Successfull...
+[INFO] [2026/2/16 19:16:41]:BattleWorldSvc Add [4] Containers
+[INFO] [2026/2/16 19:16:41]:[GameService] 正在初始化...
+[INFO] [2026/2/16 19:16:41]:[LocalStorage] 加载String数据成功: 1 条记录
+[INFO] [2026/2/16 19:16:41]:[LocalStorage]   - Key: money, Value长度: 4
+[INFO] [2026/2/16 19:16:41]:[LocalStorage] Hash文件读取成功，JSON长度: 22410字符
+[INFO] [2026/2/16 19:16:41]:[LocalStorage] JSON反序列化成功，发现 4 个顶层键
+[INFO] [2026/2/16 19:16:41]:[LocalStorage]   [已加载] Hash表: company, 字段数: 1
+[INFO] [2026/2/16 19:16:41]:[LocalStorage]   [已加载] Hash表: , 字段数: 1
+[INFO] [2026/2/16 19:16:41]:[LocalStorage]   [已加载] Hash表: player:UPgCmpna6seyUOJFkbo+Fw==, 字段数: 3
+[INFO] [2026/2/16 19:16:41]:[LocalStorage]   [已加载] Hash表: UPgCmpna6seyUOJFkbo+Fw==, 字段数: 5
+[INFO] [2026/2/16 19:16:41]:[LocalStorage] 加载Hash数据成功: 4 个Hash表（JSON顶层键: 4, 跳过: 0）
+[INFO] [2026/2/16 19:16:41]:[LocalStorage] === 内存中的Hash表最终列表 ===
+[INFO] [2026/2/16 19:16:41]:[LocalStorage]   - Hash表: company, 字段数: 1
+[INFO] [2026/2/16 19:16:41]:[LocalStorage]   - Hash表: , 字段数: 1
+[INFO] [2026/2/16 19:16:41]:[LocalStorage]   - Hash表: player:UPgCmpna6seyUOJFkbo+Fw==, 字段数: 3
+[INFO] [2026/2/16 19:16:41]:[LocalStorage]   - Hash表: UPgCmpna6seyUOJFkbo+Fw==, 字段数: 5
+[INFO] [2026/2/16 19:16:41]:[LocalStorage] ==========================================
+[INFO] [2026/2/16 19:16:41]:[LocalStorage] 保存模式: 立即保存模式（每次请求都保存）
+[INFO] [2026/2/16 19:16:41]:[LocalStorage] 初始化时间: 2026/2/16 19:16:41
+[INFO] [2026/2/16 19:16:41]:[LocalStorage] 保存间隔: 24小时 = 1440分钟 = 86400秒
+[INFO] [2026/2/16 19:16:41]:[LocalStorage] 数据目录: Data
+[INFO] [2026/2/16 19:16:41]:[LocalStorage] String文件: Data\string_data.json
+[INFO] [2026/2/16 19:16:41]:[LocalStorage] Hash文件: Data\hash_data.json
+[INFO] [2026/2/16 19:16:41]:[LocalStorage] ==========================================
+[INFO] [2026/2/16 19:16:41]:[GameService] LocalDataStorage 初始化完成
+[INFO] [2026/2/16 19:16:41]:[GameServer] HTTP模式初始化完成
+[INFO] [2026/2/16 19:16:41]:[GameService] GameServer 初始化完成
+[HttpServer] 初始化完成，监听地址: http://+:45677/
+[HttpServer] ? 启动成功，监听: http://+:45677/
+[INFO] [2026/2/16 19:16:41]:[GameService] HttpServer 初始化完成
+[INFO] [2026/2/16 19:16:41]:[GameService] 服务初始化成功（HTTP模式）
+[INFO] [2026/2/16 19:16:41]:[CommandSystem] 命令系统初始化完成
+[INFO] [2026/2/16 19:16:41]:[CommandSystem] 输入 /help 查看所有可用命令
+[HttpServer] POST /api/player/join
+[HttpServer] 收到请求体 (69字节): {"playerId":"","playerName":"","companyName":"","token":"","data":{}}
+[SessionManager] 创建会话:  (Token: bCk5s8/ELIcno1I3...)
+[INFO] [2026/2/16 19:17:59]:[GameServer] HTTP - 玩家加入: (), 公司: 
+[HttpServer] Response 200: 加入成功
+[HttpServer] POST /api/player/join
+[HttpServer] 收到请求体 (138字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"","token":"bCk5s8/ELIcno1I3QIpwIxkk8ba8idVgZpfxVLQSsiM=","data":{}}
+[SessionManager] 创建会话: 北 (Token: QXJ0359cns2vkune...)
+[INFO] [2026/2/16 19:18:01]:[GameServer] HTTP - 玩家加入: 北(UPgCmpna6seyUOJFkbo+Fw==), 公司: 
+[HttpServer] Response 200: 加入成功
+[HttpServer] POST /api/player/check-first
+[HttpServer] 收到请求体 (138字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{}}
+[INFO] [2026/2/16 19:18:01]:[GameServer] HTTP CheckPlayerCreatByFirst - 玩家: UPgCmpna6seyUOJFkbo+Fw==, 首次创建: False
+[HttpServer] Response 200: 欢迎回来!
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (203字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"company","jsonDoubleKey":"UPgCmpna6seyUOJFkbo+Fw=="}}
+[INFO] [2026/2/16 19:18:01]:[LocalStorage] HashGet 调用 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==
+[INFO] [2026/2/16 19:18:01]:[LocalStorage] HashGet 命中 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222
+[INFO] [2026/2/16 19:18:01]:[GameServer] HTTP GetJson Hash - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Length: 222
+[HttpServer] Response 200: 获取成功
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (204字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"icon"}}
+[INFO] [2026/2/16 19:18:01]:[LocalStorage] HashGet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: icon
+[INFO] [2026/2/16 19:18:01]:[LocalStorage] HashGet 命中 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: icon, Value长度: 13301
+[INFO] [2026/2/16 19:18:01]:[GameServer] HTTP GetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: icon, Length: 13301
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (208字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"Benefits"}}
+[INFO] [2026/2/16 19:18:01]:[LocalStorage] HashGet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: Benefits
+[INFO] [2026/2/16 19:18:01]:[LocalStorage] HashGet 未命中字段 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: Benefits
+[HttpServer] Response 200: 获取成功
+[INFO] [2026/2/16 19:18:01]:[GameServer] HTTP GetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: Benefits, Length: 0
+[HttpServer] Response 200: 数据不存在
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (203字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"bag"}}
+[INFO] [2026/2/16 19:18:04]:[LocalStorage] HashGet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag
+[INFO] [2026/2/16 19:18:04]:[LocalStorage] HashGet 命中 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, Value长度: 129
+[INFO] [2026/2/16 19:18:04]:[GameServer] HTTP GetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, Length: 129
+[HttpServer] Response 200: 获取成功
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (205字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"block"}}
+[INFO] [2026/2/16 19:18:04]:[LocalStorage] HashGet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block
+[INFO] [2026/2/16 19:18:04]:[LocalStorage] HashGet 命中 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block, Value长度: 130
+[INFO] [2026/2/16 19:18:04]:[GameServer] HTTP GetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block, Length: 130
+[HttpServer] Response 200: 获取成功
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (208字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"messages"}}
+[INFO] [2026/2/16 19:18:05]:[LocalStorage] HashGet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: messages
+[INFO] [2026/2/16 19:18:05]:[LocalStorage] HashGet 命中 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: messages, Value长度: 280
+[INFO] [2026/2/16 19:18:05]:[GameServer] HTTP GetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: messages, Length: 280
+[HttpServer] Response 200: 获取成功
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (204字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"time"}}
+[INFO] [2026/2/16 19:18:05]:[LocalStorage] HashGet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: time
+[INFO] [2026/2/16 19:18:05]:[LocalStorage] HashGet 未命中字段 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: time
+[INFO] [2026/2/16 19:18:05]:[GameServer] HTTP GetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: time, Length: 0
+[HttpServer] Response 200: 数据不存在
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (159字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonKey":"money"}}
+[INFO] [2026/2/16 19:18:06]:[GameServer] HTTP GetJson String - Key: money, Length: 4
+[HttpServer] Response 200: 获取成功
+[HttpServer] POST /api/data/set
+[HttpServer] 收到请求体 (470字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"company","jsonDoubleKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonValue":"{\"CompName\":\"北的公司\",\"CEO_ID\":\"UPgCmpna6seyUOJFkbo+Fw==\",\"personCount_Company\":0,\"All_saveMoney\":-195.0,\"CreatTime\":\"2026-02-16T14:31:11.2455238+08:00\",\"jobs\":[],\"isListed\":false,\"LendMoney\":0.0,\"stocks\":[],\"Icon_Byte\":null}"}}
+[INFO] [2026/2/16 19:18:06]:[GameServer] HTTP SetJson Hash - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] HashSet 调用 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] HashSet 写入内存成功 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, 该Hash表有 1 个字段, 内存中共有 4 个Hash表
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] === SaveToDisk 开始 ===
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] 脏标记: True, 保存模式: Instant
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] 内存数据统计 - String: 1条, Hash: 4个
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] 准备序列化数据...
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] 序列化String数据... (1条)
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] String JSON长度: 23字符
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] 写入String文件: Data\string_data.json
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] String文件写入成功 - 大小: 23字节, 修改时间: 2026/2/16 19:18:06
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] 序列化Hash数据... (4个Hash表)
+[INFO] [2026/2/16 19:18:06]:[LocalStorage]   - Hash表 'company': 1个字段
+[INFO] [2026/2/16 19:18:06]:[LocalStorage]   - Hash表 '': 1个字段
+[INFO] [2026/2/16 19:18:06]:[LocalStorage]   - Hash表 'player:UPgCmpna6seyUOJFkbo+Fw==': 3个字段
+[INFO] [2026/2/16 19:18:06]:[LocalStorage]   - Hash表 'UPgCmpna6seyUOJFkbo+Fw==': 5个字段
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] Hash JSON长度: 22410字符
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] 写入Hash文件: Data\hash_data.json
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] Hash文件写入成功 - 大小: 34393字节, 修改时间: 2026/2/16 19:18:06
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] >>> 数据保存成功 - String: 1条, Hash: 4个 <<<
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] 清除脏标记，更新保存时间: 2026/2/16 19:18:06
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] === SaveToDisk 结束 ===
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] HashSet 返回 - Success: True, SaveMode: Instant
+[HttpServer] Response 200: 保存成功
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (207字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"persons"}}
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] HashGet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: persons
+[INFO] [2026/2/16 19:18:06]:[LocalStorage] HashGet 命中 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: persons, Value长度: 2
+[INFO] [2026/2/16 19:18:06]:[GameServer] HTTP GetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: persons, Length: 2
+[HttpServer] Response 200: 获取成功
+[HttpServer] POST /api/data/set
+[HttpServer] 收到请求体 (382字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"block","jsonValue":"{\"builds\":[{\"nameUrl\":\"BuildPrefab_Plane\",\"vector3Json\":{\"x\":1.25,\"y\":0.05,\"z\":-2.5},\"quaternionJson\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0}}]}"}}
+[INFO] [2026/2/16 19:18:23]:[GameServer] HTTP SetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block, Value长度: 138
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] HashSet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block, Value长度: 138
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] HashSet 写入内存成功 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block, 该Hash表有 5 个字段, 内存中共有 4 个Hash表
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] === SaveToDisk 开始 ===
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 脏标记: True, 保存模式: Instant
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 内存数据统计 - String: 1条, Hash: 4个
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 准备序列化数据...
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 序列化String数据... (1条)
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] String JSON长度: 23字符
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 写入String文件: Data\string_data.json
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] String文件写入成功 - 大小: 23字节, 修改时间: 2026/2/16 19:18:23
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 序列化Hash数据... (4个Hash表)
+[INFO] [2026/2/16 19:18:23]:[LocalStorage]   - Hash表 'company': 1个字段
+[INFO] [2026/2/16 19:18:23]:[LocalStorage]   - Hash表 '': 1个字段
+[INFO] [2026/2/16 19:18:23]:[LocalStorage]   - Hash表 'player:UPgCmpna6seyUOJFkbo+Fw==': 3个字段
+[INFO] [2026/2/16 19:18:23]:[LocalStorage]   - Hash表 'UPgCmpna6seyUOJFkbo+Fw==': 5个字段
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] Hash JSON长度: 22418字符
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 写入Hash文件: Data\hash_data.json
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] Hash文件写入成功 - 大小: 34401字节, 修改时间: 2026/2/16 19:18:23
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] >>> 数据保存成功 - String: 1条, Hash: 4个 <<<
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 清除脏标记，更新保存时间: 2026/2/16 19:18:23
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] === SaveToDisk 结束 ===
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] HashSet 返回 - Success: True, SaveMode: Instant
+[HttpServer] Response 200: 保存成功
+[HttpServer] POST /api/data/set
+[HttpServer] 收到请求体 (367字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"bag","jsonValue":"{\"elements\":[{\"name\":\"地板\",\"UrlName\":\"BuildPrefab_Plane\",\"UrlSpriteName\":\"DuiHuaKeMeng\",\"UseMoney\":15,\"buildType\":0}],\"count\":[3]}"}}
+[INFO] [2026/2/16 19:18:23]:[GameServer] HTTP SetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, Value长度: 129
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] HashSet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, Value长度: 129
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] HashSet 写入内存成功 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, 该Hash表有 5 个字段, 内存中共有 4 个Hash表
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] === SaveToDisk 开始 ===
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 脏标记: True, 保存模式: Instant
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 内存数据统计 - String: 1条, Hash: 4个
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 准备序列化数据...
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 序列化String数据... (1条)
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] String JSON长度: 23字符
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 写入String文件: Data\string_data.json
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] String文件写入成功 - 大小: 23字节, 修改时间: 2026/2/16 19:18:23
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 序列化Hash数据... (4个Hash表)
+[INFO] [2026/2/16 19:18:23]:[LocalStorage]   - Hash表 'company': 1个字段
+[INFO] [2026/2/16 19:18:23]:[LocalStorage]   - Hash表 '': 1个字段
+[INFO] [2026/2/16 19:18:23]:[LocalStorage]   - Hash表 'player:UPgCmpna6seyUOJFkbo+Fw==': 3个字段
+[INFO] [2026/2/16 19:18:23]:[LocalStorage]   - Hash表 'UPgCmpna6seyUOJFkbo+Fw==': 5个字段
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] Hash JSON长度: 22418字符
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 写入Hash文件: Data\hash_data.json
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] Hash文件写入成功 - 大小: 34401字节, 修改时间: 2026/2/16 19:18:23
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] >>> 数据保存成功 - String: 1条, Hash: 4个 <<<
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 清除脏标记，更新保存时间: 2026/2/16 19:18:23
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] === SaveToDisk 结束 ===
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[INFO] [2026/2/16 19:18:23]:[LocalStorage] HashSet 返回 - Success: True, SaveMode: Instant
+[HttpServer] Response 200: 保存成功
+[HttpServer] POST /api/data/set
+[HttpServer] 收到请求体 (367字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"bag","jsonValue":"{\"elements\":[{\"name\":\"地板\",\"UrlName\":\"BuildPrefab_Plane\",\"UrlSpriteName\":\"DuiHuaKeMeng\",\"UseMoney\":15,\"buildType\":0}],\"count\":[4]}"}}
+[INFO] [2026/2/16 19:18:26]:[GameServer] HTTP SetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, Value长度: 129
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] HashSet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, Value长度: 129
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] HashSet 写入内存成功 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, 该Hash表有 5 个字段, 内存中共有 4 个Hash表
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] === SaveToDisk 开始 ===
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 脏标记: True, 保存模式: Instant
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 内存数据统计 - String: 1条, Hash: 4个
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 准备序列化数据...
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 序列化String数据... (1条)
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] String JSON长度: 23字符
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 写入String文件: Data\string_data.json
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] String文件写入成功 - 大小: 23字节, 修改时间: 2026/2/16 19:18:26
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 序列化Hash数据... (4个Hash表)
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 'company': 1个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 '': 1个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 'player:UPgCmpna6seyUOJFkbo+Fw==': 3个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 'UPgCmpna6seyUOJFkbo+Fw==': 5个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] Hash JSON长度: 22418字符
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 写入Hash文件: Data\hash_data.json
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] Hash文件写入成功 - 大小: 34401字节, 修改时间: 2026/2/16 19:18:26
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] >>> 数据保存成功 - String: 1条, Hash: 4个 <<<
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 清除脏标记，更新保存时间: 2026/2/16 19:18:26
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] === SaveToDisk 结束 ===
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] HashSet 返回 - Success: True, SaveMode: Instant
+[HttpServer] Response 200: 保存成功
+[HttpServer] POST /api/data/set
+[HttpServer] 收到请求体 (470字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"company","jsonDoubleKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonValue":"{\"CompName\":\"北的公司\",\"CEO_ID\":\"UPgCmpna6seyUOJFkbo+Fw==\",\"personCount_Company\":0,\"All_saveMoney\":-210.0,\"CreatTime\":\"2026-02-16T14:31:11.2455238+08:00\",\"jobs\":[],\"isListed\":false,\"LendMoney\":0.0,\"stocks\":[],\"Icon_Byte\":null}"}}
+[INFO] [2026/2/16 19:18:26]:[GameServer] HTTP SetJson Hash - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] HashSet 调用 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] HashSet 写入内存成功 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, 该Hash表有 1 个字段, 内存中共有 4 个Hash表
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] === SaveToDisk 开始 ===
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 脏标记: True, 保存模式: Instant
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 内存数据统计 - String: 1条, Hash: 4个
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 准备序列化数据...
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 序列化String数据... (1条)
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] String JSON长度: 23字符
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 写入String文件: Data\string_data.json
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] String文件写入成功 - 大小: 23字节, 修改时间: 2026/2/16 19:18:26
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 序列化Hash数据... (4个Hash表)
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 'company': 1个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 '': 1个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 'player:UPgCmpna6seyUOJFkbo+Fw==': 3个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 'UPgCmpna6seyUOJFkbo+Fw==': 5个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] Hash JSON长度: 22418字符
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 写入Hash文件: Data\hash_data.json
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] Hash文件写入成功 - 大小: 34401字节, 修改时间: 2026/2/16 19:18:26
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] >>> 数据保存成功 - String: 1条, Hash: 4个 <<<
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 清除脏标记，更新保存时间: 2026/2/16 19:18:26
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] === SaveToDisk 结束 ===
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] HashSet 返回 - Success: True, SaveMode: Instant
+[HttpServer] Response 200: 保存成功
+[HttpServer] POST /api/data/set
+[HttpServer] 收到请求体 (367字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"bag","jsonValue":"{\"elements\":[{\"name\":\"地板\",\"UrlName\":\"BuildPrefab_Plane\",\"UrlSpriteName\":\"DuiHuaKeMeng\",\"UseMoney\":15,\"buildType\":0}],\"count\":[5]}"}}
+[INFO] [2026/2/16 19:18:26]:[GameServer] HTTP SetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, Value长度: 129
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] HashSet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, Value长度: 129
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] HashSet 写入内存成功 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, 该Hash表有 5 个字段, 内存中共有 4 个Hash表
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] === SaveToDisk 开始 ===
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 脏标记: True, 保存模式: Instant
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 内存数据统计 - String: 1条, Hash: 4个
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 准备序列化数据...
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 序列化String数据... (1条)
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] String JSON长度: 23字符
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 写入String文件: Data\string_data.json
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] String文件写入成功 - 大小: 23字节, 修改时间: 2026/2/16 19:18:26
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 序列化Hash数据... (4个Hash表)
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 'company': 1个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 '': 1个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 'player:UPgCmpna6seyUOJFkbo+Fw==': 3个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 'UPgCmpna6seyUOJFkbo+Fw==': 5个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] Hash JSON长度: 22418字符
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 写入Hash文件: Data\hash_data.json
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] Hash文件写入成功 - 大小: 34401字节, 修改时间: 2026/2/16 19:18:26
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] >>> 数据保存成功 - String: 1条, Hash: 4个 <<<
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 清除脏标记，更新保存时间: 2026/2/16 19:18:26
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] === SaveToDisk 结束 ===
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] HashSet 返回 - Success: True, SaveMode: Instant
+[HttpServer] Response 200: 保存成功
+[HttpServer] POST /api/data/set
+[HttpServer] 收到请求体 (470字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"company","jsonDoubleKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonValue":"{\"CompName\":\"北的公司\",\"CEO_ID\":\"UPgCmpna6seyUOJFkbo+Fw==\",\"personCount_Company\":0,\"All_saveMoney\":-225.0,\"CreatTime\":\"2026-02-16T14:31:11.2455238+08:00\",\"jobs\":[],\"isListed\":false,\"LendMoney\":0.0,\"stocks\":[],\"Icon_Byte\":null}"}}
+[INFO] [2026/2/16 19:18:26]:[GameServer] HTTP SetJson Hash - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] HashSet 调用 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] HashSet 写入内存成功 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, 该Hash表有 1 个字段, 内存中共有 4 个Hash表
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] === SaveToDisk 开始 ===
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 脏标记: True, 保存模式: Instant
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 内存数据统计 - String: 1条, Hash: 4个
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 准备序列化数据...
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 序列化String数据... (1条)
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] String JSON长度: 23字符
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 写入String文件: Data\string_data.json
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] String文件写入成功 - 大小: 23字节, 修改时间: 2026/2/16 19:18:26
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 序列化Hash数据... (4个Hash表)
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 'company': 1个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 '': 1个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 'player:UPgCmpna6seyUOJFkbo+Fw==': 3个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage]   - Hash表 'UPgCmpna6seyUOJFkbo+Fw==': 5个字段
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] Hash JSON长度: 22418字符
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 写入Hash文件: Data\hash_data.json
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] Hash文件写入成功 - 大小: 34401字节, 修改时间: 2026/2/16 19:18:26
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] >>> 数据保存成功 - String: 1条, Hash: 4个 <<<
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 清除脏标记，更新保存时间: 2026/2/16 19:18:26
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] === SaveToDisk 结束 ===
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[INFO] [2026/2/16 19:18:26]:[LocalStorage] HashSet 返回 - Success: True, SaveMode: Instant
+[HttpServer] Response 200: 保存成功
+[HttpServer] POST /api/data/set
+[HttpServer] 收到请求体 (572字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"block","jsonValue":"{\"builds\":[{\"nameUrl\":\"BuildPrefab_Plane\",\"vector3Json\":{\"x\":1.25,\"y\":0.05,\"z\":-2.5},\"quaternionJson\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0}},{\"nameUrl\":\"BuildPrefab_Plane\",\"vector3Json\":{\"x\":1.25,\"y\":0.05,\"z\":0.0220000744},\"quaternionJson\":{\"x\":2.33913733E-09,\"y\":-4.17533228E-18,\"z\":1.78498816E-09,\"w\":1.0}}]}"}}
+[INFO] [2026/2/16 19:18:36]:[GameServer] HTTP SetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block, Value长度: 306
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] HashSet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block, Value长度: 306
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] HashSet 写入内存成功 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block, 该Hash表有 5 个字段, 内存中共有 4 个Hash表
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] === SaveToDisk 开始 ===
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 脏标记: True, 保存模式: Instant
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 内存数据统计 - String: 1条, Hash: 4个
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 准备序列化数据...
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 序列化String数据... (1条)
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] String JSON长度: 23字符
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 写入String文件: Data\string_data.json
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] String文件写入成功 - 大小: 23字节, 修改时间: 2026/2/16 19:18:36
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 序列化Hash数据... (4个Hash表)
+[INFO] [2026/2/16 19:18:36]:[LocalStorage]   - Hash表 'company': 1个字段
+[INFO] [2026/2/16 19:18:36]:[LocalStorage]   - Hash表 '': 1个字段
+[INFO] [2026/2/16 19:18:36]:[LocalStorage]   - Hash表 'player:UPgCmpna6seyUOJFkbo+Fw==': 3个字段
+[INFO] [2026/2/16 19:18:36]:[LocalStorage]   - Hash表 'UPgCmpna6seyUOJFkbo+Fw==': 5个字段
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] Hash JSON长度: 22608字符
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 写入Hash文件: Data\hash_data.json
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] Hash文件写入成功 - 大小: 34591字节, 修改时间: 2026/2/16 19:18:36
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] >>> 数据保存成功 - String: 1条, Hash: 4个 <<<
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 清除脏标记，更新保存时间: 2026/2/16 19:18:36
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] === SaveToDisk 结束 ===
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] HashSet 返回 - Success: True, SaveMode: Instant
+[HttpServer] Response 200: 保存成功
+[HttpServer] POST /api/data/set
+[HttpServer] 收到请求体 (367字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"QXJ0359cns2vkuneTimqIcDBJYIil5Z0KP075HbF+X0=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"bag","jsonValue":"{\"elements\":[{\"name\":\"地板\",\"UrlName\":\"BuildPrefab_Plane\",\"UrlSpriteName\":\"DuiHuaKeMeng\",\"UseMoney\":15,\"buildType\":0}],\"count\":[4]}"}}
+[INFO] [2026/2/16 19:18:36]:[GameServer] HTTP SetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, Value长度: 129
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] HashSet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, Value长度: 129
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] HashSet 写入内存成功 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, 该Hash表有 5 个字段, 内存中共有 4 个Hash表
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] === SaveToDisk 开始 ===
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 脏标记: True, 保存模式: Instant
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 内存数据统计 - String: 1条, Hash: 4个
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 准备序列化数据...
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 序列化String数据... (1条)
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] String JSON长度: 23字符
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 写入String文件: Data\string_data.json
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] String文件写入成功 - 大小: 23字节, 修改时间: 2026/2/16 19:18:36
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 序列化Hash数据... (4个Hash表)
+[INFO] [2026/2/16 19:18:36]:[LocalStorage]   - Hash表 'company': 1个字段
+[INFO] [2026/2/16 19:18:36]:[LocalStorage]   - Hash表 '': 1个字段
+[INFO] [2026/2/16 19:18:36]:[LocalStorage]   - Hash表 'player:UPgCmpna6seyUOJFkbo+Fw==': 3个字段
+[INFO] [2026/2/16 19:18:36]:[LocalStorage]   - Hash表 'UPgCmpna6seyUOJFkbo+Fw==': 5个字段
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] Hash JSON长度: 22608字符
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 写入Hash文件: Data\hash_data.json
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] Hash文件写入成功 - 大小: 34591字节, 修改时间: 2026/2/16 19:18:36
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] >>> 数据保存成功 - String: 1条, Hash: 4个 <<<
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 清除脏标记，更新保存时间: 2026/2/16 19:18:36
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] === SaveToDisk 结束 ===
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[INFO] [2026/2/16 19:18:36]:[LocalStorage] HashSet 返回 - Success: True, SaveMode: Instant
+[HttpServer] Response 200: 保存成功
+[HttpServer] POST /api/player/join
+[HttpServer] 收到请求体 (69字节): {"playerId":"","playerName":"","companyName":"","token":"","data":{}}
+[SessionManager] 创建会话:  (Token: So9SYBXx9SaRBa5E...)
+[INFO] [2026/2/16 19:18:42]:[GameServer] HTTP - 玩家加入: (), 公司: 
+[HttpServer] Response 200: 加入成功
+[HttpServer] POST /api/player/join
+[HttpServer] 收到请求体 (138字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"","token":"So9SYBXx9SaRBa5ELzcDCm+MDBp/fYz8ABZk8l2EUFU=","data":{}}
+[SessionManager] 创建会话: 北 (Token: Z+sqrfMltv2+4TkI...)
+[INFO] [2026/2/16 19:18:44]:[GameServer] HTTP - 玩家加入: 北(UPgCmpna6seyUOJFkbo+Fw==), 公司: 
+[HttpServer] Response 200: 加入成功
+[HttpServer] POST /api/player/check-first
+[HttpServer] 收到请求体 (138字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"","token":"Z+sqrfMltv2+4TkI4PHfD26byMA36ii4lc1FX6tvCZQ=","data":{}}
+[INFO] [2026/2/16 19:18:44]:[GameServer] HTTP CheckPlayerCreatByFirst - 玩家: UPgCmpna6seyUOJFkbo+Fw==, 首次创建: False
+[HttpServer] Response 200: 欢迎回来!
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (203字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"","token":"Z+sqrfMltv2+4TkI4PHfD26byMA36ii4lc1FX6tvCZQ=","data":{"jsonDicKey":"company","jsonDoubleKey":"UPgCmpna6seyUOJFkbo+Fw=="}}
+[INFO] [2026/2/16 19:18:44]:[LocalStorage] HashGet 调用 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==
+[INFO] [2026/2/16 19:18:44]:[LocalStorage] HashGet 命中 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222
+[INFO] [2026/2/16 19:18:44]:[GameServer] HTTP GetJson Hash - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Length: 222
+[HttpServer] Response 200: 获取成功
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (204字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"Z+sqrfMltv2+4TkI4PHfD26byMA36ii4lc1FX6tvCZQ=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"icon"}}
+[INFO] [2026/2/16 19:18:44]:[LocalStorage] HashGet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: icon
+[INFO] [2026/2/16 19:18:44]:[LocalStorage] HashGet 命中 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: icon, Value长度: 13301
+[INFO] [2026/2/16 19:18:44]:[GameServer] HTTP GetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: icon, Length: 13301
+[HttpServer] Response 200: 获取成功
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (208字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"Z+sqrfMltv2+4TkI4PHfD26byMA36ii4lc1FX6tvCZQ=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"Benefits"}}
+[INFO] [2026/2/16 19:18:44]:[LocalStorage] HashGet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: Benefits
+[INFO] [2026/2/16 19:18:44]:[LocalStorage] HashGet 未命中字段 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: Benefits
+[INFO] [2026/2/16 19:18:44]:[GameServer] HTTP GetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: Benefits, Length: 0
+[HttpServer] Response 200: 数据不存在
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (203字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"Z+sqrfMltv2+4TkI4PHfD26byMA36ii4lc1FX6tvCZQ=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"bag"}}
+[INFO] [2026/2/16 19:18:47]:[LocalStorage] HashGet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag
+[INFO] [2026/2/16 19:18:47]:[LocalStorage] HashGet 命中 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, Value长度: 129
+[INFO] [2026/2/16 19:18:47]:[GameServer] HTTP GetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: bag, Length: 129
+[HttpServer] Response 200: 获取成功
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (205字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"Z+sqrfMltv2+4TkI4PHfD26byMA36ii4lc1FX6tvCZQ=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"block"}}
+[INFO] [2026/2/16 19:18:47]:[LocalStorage] HashGet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block
+[INFO] [2026/2/16 19:18:47]:[LocalStorage] HashGet 命中 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block, Value长度: 306
+[INFO] [2026/2/16 19:18:47]:[GameServer] HTTP GetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: block, Length: 306
+[HttpServer] Response 200: 获取成功
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (208字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"Z+sqrfMltv2+4TkI4PHfD26byMA36ii4lc1FX6tvCZQ=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"messages"}}
+[INFO] [2026/2/16 19:18:48]:[LocalStorage] HashGet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: messages
+[INFO] [2026/2/16 19:18:48]:[LocalStorage] HashGet 命中 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: messages, Value长度: 280
+[INFO] [2026/2/16 19:18:48]:[GameServer] HTTP GetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: messages, Length: 280
+[HttpServer] Response 200: 获取成功
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (204字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"Z+sqrfMltv2+4TkI4PHfD26byMA36ii4lc1FX6tvCZQ=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"time"}}
+[INFO] [2026/2/16 19:18:48]:[LocalStorage] HashGet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: time
+[INFO] [2026/2/16 19:18:48]:[LocalStorage] HashGet 未命中字段 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: time
+[INFO] [2026/2/16 19:18:48]:[GameServer] HTTP GetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: time, Length: 0
+[HttpServer] Response 200: 数据不存在
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (159字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"Z+sqrfMltv2+4TkI4PHfD26byMA36ii4lc1FX6tvCZQ=","data":{"jsonKey":"money"}}
+[INFO] [2026/2/16 19:18:48]:[GameServer] HTTP GetJson String - Key: money, Length: 4
+[HttpServer] Response 200: 获取成功
+[HttpServer] POST /api/data/set
+[HttpServer] 收到请求体 (470字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"Z+sqrfMltv2+4TkI4PHfD26byMA36ii4lc1FX6tvCZQ=","data":{"jsonDicKey":"company","jsonDoubleKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonValue":"{\"CompName\":\"北的公司\",\"CEO_ID\":\"UPgCmpna6seyUOJFkbo+Fw==\",\"personCount_Company\":0,\"All_saveMoney\":-225.0,\"CreatTime\":\"2026-02-16T14:31:11.2455238+08:00\",\"jobs\":[],\"isListed\":false,\"LendMoney\":0.0,\"stocks\":[],\"Icon_Byte\":null}"}}
+[INFO] [2026/2/16 19:18:49]:[GameServer] HTTP SetJson Hash - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] HashSet 调用 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] HashSet 写入内存成功 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, 该Hash表有 1 个字段, 内存中共有 4 个Hash表
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] === SaveToDisk 开始 ===
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] 脏标记: True, 保存模式: Instant
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] 内存数据统计 - String: 1条, Hash: 4个
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] 准备序列化数据...
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] 序列化String数据... (1条)
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] String JSON长度: 23字符
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] 写入String文件: Data\string_data.json
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] String文件写入成功 - 大小: 23字节, 修改时间: 2026/2/16 19:18:49
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] 序列化Hash数据... (4个Hash表)
+[INFO] [2026/2/16 19:18:49]:[LocalStorage]   - Hash表 'company': 1个字段
+[INFO] [2026/2/16 19:18:49]:[LocalStorage]   - Hash表 '': 1个字段
+[INFO] [2026/2/16 19:18:49]:[LocalStorage]   - Hash表 'player:UPgCmpna6seyUOJFkbo+Fw==': 3个字段
+[INFO] [2026/2/16 19:18:49]:[LocalStorage]   - Hash表 'UPgCmpna6seyUOJFkbo+Fw==': 5个字段
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] Hash JSON长度: 22608字符
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] 写入Hash文件: Data\hash_data.json
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] Hash文件写入成功 - 大小: 34591字节, 修改时间: 2026/2/16 19:18:49
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] >>> 数据保存成功 - String: 1条, Hash: 4个 <<<
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] 清除脏标记，更新保存时间: 2026/2/16 19:18:49
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] === SaveToDisk 结束 ===
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] HashSet 返回 - Success: True, SaveMode: Instant
+[HttpServer] Response 200: 保存成功
+[HttpServer] POST /api/data/get
+[HttpServer] 收到请求体 (207字节): {"playerId":"UPgCmpna6seyUOJFkbo+Fw==","playerName":"北","companyName":"北的公司","token":"Z+sqrfMltv2+4TkI4PHfD26byMA36ii4lc1FX6tvCZQ=","data":{"jsonDicKey":"UPgCmpna6seyUOJFkbo+Fw==","jsonDoubleKey":"persons"}}
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] HashGet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: persons
+[INFO] [2026/2/16 19:18:49]:[LocalStorage] HashGet 命中 - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: persons, Value长度: 2
+[INFO] [2026/2/16 19:18:49]:[GameServer] HTTP GetJson Hash - Key: UPgCmpna6seyUOJFkbo+Fw==, Field: persons, Length: 2
+[HttpServer] Response 200: 获取成功

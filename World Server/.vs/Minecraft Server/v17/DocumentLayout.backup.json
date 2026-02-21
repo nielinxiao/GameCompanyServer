@@ -1,0 +1,1094 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|c:\\users\\nie\\desktop\\unity\u6210\u54C1\\world server\\mysql\\mysqltcp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:mysql\\mysqltcp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\openprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:openprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\tools\\acctcp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:tools\\acctcp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\servc\\accsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:servc\\accsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\tools\\logtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:tools\\logtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\peroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:peroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\mysql\\msyqlsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:mysql\\msyqlsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\servc\\signsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:servc\\signsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\comp\\astartcomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:comp\\astartcomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\comp\\aoicomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:comp\\aoicomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\tools\\xmltool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:tools\\xmltool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\comp\\timecomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:comp\\timecomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\astart\\jsonpathnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:astart\\jsonpathnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\tools\\battletcp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:tools\\battletcp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\client\\gamecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:client\\gamecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\world\\battleworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:world\\battleworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\world\\sworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:world\\sworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\tools\\mathhouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:tools\\mathhouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\comp\\transformcomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:comp\\transformcomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\comp\\networkitemcomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:comp\\networkitemcomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\config\\skillconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:config\\skillconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\config\\fightconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:config\\fightconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\buffercomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:buffercomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\config\\toolsdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:config\\toolsdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\interface\\ilogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:interface\\ilogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\client\\splayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:client\\splayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\item\\centerfiresystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:item\\centerfiresystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\skill\\fasterbuffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:skill\\fasterbuffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\item\\centerfire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:item\\centerfire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\item\\firetool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:item\\firetool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\item\\networktool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:item\\networktool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\config\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:config\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\config\\realmroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:config\\realmroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\skill\\bufferbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:skill\\bufferbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\comp\\occupiedcomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:comp\\occupiedcomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\item\\fireextinguishers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:item\\fireextinguishers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\item\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:item\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\tools\\voicetcp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:tools\\voicetcp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\comp\\exploitscomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:comp\\exploitscomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\comp\\audiocomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:comp\\audiocomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\servc\\mainworldsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:servc\\mainworldsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\servc\\timersvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:servc\\timersvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\interface\\inet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:interface\\inet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\tools\\xmltool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|solutionrelative:tools\\xmltool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\client\\splayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|solutionrelative:client\\splayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\interface\\inet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|solutionrelative:interface\\inet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\interface\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Word Sever.csproj|solutionrelative:interface\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\interface\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|solutionrelative:interface\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\interface\\ilogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|solutionrelative:interface\\ilogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\tools\\logtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|solutionrelative:tools\\logtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\servc\\timersvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|solutionrelative:servc\\timersvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\client\\gamecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|solutionrelative:client\\gamecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\servc\\accsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|solutionrelative:servc\\accsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\openprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|solutionrelative:openprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\peroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}|Minecraft Server.csproj|solutionrelative:peroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nie\\Desktop\\World Server\\Client\\Sworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nie\\Desktop\\World Server\\Servc\\NetSvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nie\\Desktop\\World Server\\Servc\\ConsoleSvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nie\\Desktop\\World Server\\Config\\ConsoleConfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nie\\Desktop\\World Server\\Servc\\ResSvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nie\\Desktop\\World Server\\Servc\\ResSvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nie\\Desktop\\World Server\\Config\\ConsoleConfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nie\\Desktop\\IOCP\\IOCP.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nie\\Desktop\\IOCP\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nie\\Desktop\\IOCP\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MysqlTcp.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Mysql\\MysqlTcp.cs",
+              "RelativeDocumentMoniker": "Mysql\\MysqlTcp.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Mysql\\MysqlTcp.cs",
+              "RelativeToolTip": "Mysql\\MysqlTcp.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAACUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T01:13:14.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "ConsoleConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\World Server\\Config\\ConsoleConfig.cs",
+              "RelativeDocumentMoniker": "..\\..\\World Server\\Config\\ConsoleConfig.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\World Server\\Config\\ConsoleConfig.cs",
+              "RelativeToolTip": "..\\..\\World Server\\Config\\ConsoleConfig.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T02:07:16.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "ConsoleSvc.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\World Server\\Servc\\ConsoleSvc.cs",
+              "RelativeDocumentMoniker": "..\\..\\World Server\\Servc\\ConsoleSvc.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\World Server\\Servc\\ConsoleSvc.cs",
+              "RelativeToolTip": "..\\..\\World Server\\Servc\\ConsoleSvc.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T02:02:19.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "NetSvc.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\World Server\\Servc\\NetSvc.cs",
+              "RelativeDocumentMoniker": "..\\..\\World Server\\Servc\\NetSvc.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\World Server\\Servc\\NetSvc.cs",
+              "RelativeToolTip": "..\\..\\World Server\\Servc\\NetSvc.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T02:06:42.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "ConsoleConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\World Server\\Config\\ConsoleConfig.cs",
+              "RelativeDocumentMoniker": "..\\..\\World Server\\Config\\ConsoleConfig.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\World Server\\Config\\ConsoleConfig.cs",
+              "RelativeToolTip": "..\\..\\World Server\\Config\\ConsoleConfig.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAIwDAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T07:51:14.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Sworld.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\World Server\\Client\\Sworld.cs",
+              "RelativeDocumentMoniker": "..\\..\\World Server\\Client\\Sworld.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\World Server\\Client\\Sworld.cs",
+              "RelativeToolTip": "..\\..\\World Server\\Client\\Sworld.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T03:00:03.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "ResSvc.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\World Server\\Servc\\ResSvc.cs",
+              "RelativeDocumentMoniker": "..\\..\\World Server\\Servc\\ResSvc.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\World Server\\Servc\\ResSvc.cs",
+              "RelativeToolTip": "..\\..\\World Server\\Servc\\ResSvc.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T05:17:38.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "ResSvc.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\World Server\\Servc\\ResSvc.cs",
+              "RelativeDocumentMoniker": "..\\..\\World Server\\Servc\\ResSvc.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\World Server\\Servc\\ResSvc.cs",
+              "RelativeToolTip": "..\\..\\World Server\\Servc\\ResSvc.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAxwCEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T02:27:30.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccTCP.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\AccTCP.cs",
+              "RelativeDocumentMoniker": "Tools\\AccTCP.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\AccTCP.cs",
+              "RelativeToolTip": "Tools\\AccTCP.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAhwEIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T09:22:24.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MsyqlSystem.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Mysql\\MsyqlSystem.cs",
+              "RelativeDocumentMoniker": "Mysql\\MsyqlSystem.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Mysql\\MsyqlSystem.cs",
+              "RelativeToolTip": "Mysql\\MsyqlSystem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T01:11:28.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccSvc.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Servc\\AccSvc.cs",
+              "RelativeDocumentMoniker": "Servc\\AccSvc.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Servc\\AccSvc.cs",
+              "RelativeToolTip": "Servc\\AccSvc.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwvxsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T02:25:01.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OpenProgress.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\OpenProgress.cs",
+              "RelativeDocumentMoniker": "OpenProgress.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\OpenProgress.cs",
+              "RelativeToolTip": "OpenProgress.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAQwCYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T01:59:52.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "IOCP.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\IOCP\\IOCP.cs",
+              "RelativeDocumentMoniker": "..\\..\\IOCP\\IOCP.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\IOCP\\IOCP.cs",
+              "RelativeToolTip": "..\\..\\IOCP\\IOCP.cs",
+              "ViewState": "AgIAANsBAAAAAAAAAAAawOcBAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T09:55:09.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AstartComp.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\AstartComp.cs",
+              "RelativeDocumentMoniker": "Comp\\AstartComp.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\AstartComp.cs",
+              "RelativeToolTip": "Comp\\AstartComp.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAIwDoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T06:19:09.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TimeComp.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\TimeComp.cs",
+              "RelativeDocumentMoniker": "Comp\\TimeComp.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\TimeComp.cs",
+              "RelativeToolTip": "Comp\\TimeComp.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAswBQAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T07:36:56.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "JsonPathNode.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Astart\\JsonPathNode.cs",
+              "RelativeDocumentMoniker": "Astart\\JsonPathNode.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Astart\\JsonPathNode.cs",
+              "RelativeToolTip": "Astart\\JsonPathNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T06:35:57.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BattleTCP.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\BattleTCP.cs",
+              "RelativeDocumentMoniker": "Tools\\BattleTCP.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\BattleTCP.cs",
+              "RelativeToolTip": "Tools\\BattleTCP.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwE4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T06:20:29.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CenterFireSystem.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Item\\CenterFireSystem.cs",
+              "RelativeDocumentMoniker": "Item\\CenterFireSystem.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Item\\CenterFireSystem.cs",
+              "RelativeToolTip": "Item\\CenterFireSystem.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAQwEMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T07:23:37.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CenterFire.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Item\\CenterFire.cs",
+              "RelativeDocumentMoniker": "Item\\CenterFire.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Item\\CenterFire.cs",
+              "RelativeToolTip": "Item\\CenterFire.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAewEkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T07:17:17.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BattleWorld.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\World\\BattleWorld.cs",
+              "RelativeDocumentMoniker": "World\\BattleWorld.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\World\\BattleWorld.cs",
+              "RelativeToolTip": "World\\BattleWorld.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAvwDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T08:20:36.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PERoot.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\PERoot.cs",
+              "RelativeDocumentMoniker": "PERoot.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\PERoot.cs",
+              "RelativeToolTip": "PERoot.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvxIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T01:59:48.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Sworld.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\World\\Sworld.cs",
+              "RelativeDocumentMoniker": "World\\Sworld.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\World\\Sworld.cs",
+              "RelativeToolTip": "World\\Sworld.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAADgvzoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T02:48:33.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GameContainer.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Client\\GameContainer.cs",
+              "RelativeDocumentMoniker": "Client\\GameContainer.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Client\\GameContainer.cs",
+              "RelativeToolTip": "Client\\GameContainer.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAiwCgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T02:46:49.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Message.cs",
+              "RelativeDocumentMoniker": "Message.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Message.cs",
+              "RelativeToolTip": "Message.cs",
+              "ViewState": "AgIAAPMAAAAAAAAAAAAnwPsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T01:59:44.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BufferComp.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\BufferComp.cs",
+              "RelativeDocumentMoniker": "BufferComp.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\BufferComp.cs",
+              "RelativeToolTip": "BufferComp.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAA7wFEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T08:27:12.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ToolsDocument.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Config\\ToolsDocument.cs",
+              "RelativeDocumentMoniker": "Config\\ToolsDocument.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Config\\ToolsDocument.cs",
+              "RelativeToolTip": "Config\\ToolsDocument.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAMwBIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T09:31:08.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "VoiceTcp.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\VoiceTcp.cs",
+              "RelativeDocumentMoniker": "Tools\\VoiceTcp.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\VoiceTcp.cs",
+              "RelativeToolTip": "Tools\\VoiceTcp.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwBEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T13:06:22.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "FireTool.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Item\\FireTool.cs",
+              "RelativeDocumentMoniker": "Item\\FireTool.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Item\\FireTool.cs",
+              "RelativeToolTip": "Item\\FireTool.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T10:34:24.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "OccupiedComp.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\OccupiedComp.cs",
+              "RelativeDocumentMoniker": "Comp\\OccupiedComp.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\OccupiedComp.cs",
+              "RelativeToolTip": "Comp\\OccupiedComp.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAD4vx0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T08:17:04.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TransformComp.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\TransformComp.cs",
+              "RelativeDocumentMoniker": "Comp\\TransformComp.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\TransformComp.cs",
+              "RelativeToolTip": "Comp\\TransformComp.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwBUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:10:06.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AOIComp.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\AOIComp.cs",
+              "RelativeDocumentMoniker": "Comp\\AOIComp.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\AOIComp.cs",
+              "RelativeToolTip": "Comp\\AOIComp.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA8wE4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:55:21.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "NetWorkItemComp.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\NetWorkItemComp.cs",
+              "RelativeDocumentMoniker": "Comp\\NetWorkItemComp.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\NetWorkItemComp.cs",
+              "RelativeToolTip": "Comp\\NetWorkItemComp.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAADwvw4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T09:11:52.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Map.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Config\\Map.cs",
+              "RelativeDocumentMoniker": "Config\\Map.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Config\\Map.cs",
+              "RelativeToolTip": "Config\\Map.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAIwAsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T07:53:24.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "RealmRoot.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Config\\RealmRoot.cs",
+              "RelativeDocumentMoniker": "Config\\RealmRoot.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Config\\RealmRoot.cs",
+              "RelativeToolTip": "Config\\RealmRoot.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAwBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T08:24:14.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LogTool.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\LogTool.cs",
+              "RelativeDocumentMoniker": "Tools\\LogTool.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\LogTool.cs",
+              "RelativeToolTip": "Tools\\LogTool.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAwwBEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T14:59:17.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "XmlTool.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\XmlTool.cs",
+              "RelativeDocumentMoniker": "Tools\\XmlTool.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\XmlTool.cs",
+              "RelativeToolTip": "Tools\\XmlTool.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAEwDQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T05:41:03.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Client\\SPlayer.cs",
+              "RelativeDocumentMoniker": "Client\\SPlayer.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Client\\SPlayer.cs",
+              "RelativeToolTip": "Client\\SPlayer.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAADwvxcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T05:11:44.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "FasterBuffer.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Skill\\FasterBuffer.cs",
+              "RelativeDocumentMoniker": "Skill\\FasterBuffer.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Skill\\FasterBuffer.cs",
+              "RelativeToolTip": "Skill\\FasterBuffer.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAArwBIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T14:56:16.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SkillConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Config\\SkillConfig.cs",
+              "RelativeDocumentMoniker": "Config\\SkillConfig.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Config\\SkillConfig.cs",
+              "RelativeToolTip": "Config\\SkillConfig.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAvwBwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T14:53:02.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FightConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Config\\FightConfig.cs",
+              "RelativeDocumentMoniker": "Config\\FightConfig.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Config\\FightConfig.cs",
+              "RelativeToolTip": "Config\\FightConfig.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAADwvyMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T14:53:20.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "exploitsComp.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\exploitsComp.cs",
+              "RelativeDocumentMoniker": "Comp\\exploitsComp.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\exploitsComp.cs",
+              "RelativeToolTip": "Comp\\exploitsComp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAD4vw0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T14:36:32.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "AudioComp.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\AudioComp.cs",
+              "RelativeDocumentMoniker": "Comp\\AudioComp.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Comp\\AudioComp.cs",
+              "RelativeToolTip": "Comp\\AudioComp.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAQwBIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T13:01:13.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "BufferBase.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Skill\\BufferBase.cs",
+              "RelativeDocumentMoniker": "Skill\\BufferBase.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Skill\\BufferBase.cs",
+              "RelativeToolTip": "Skill\\BufferBase.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T11:30:04.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "MainWorldSvc.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Servc\\MainWorldSvc.cs",
+              "RelativeDocumentMoniker": "Servc\\MainWorldSvc.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Servc\\MainWorldSvc.cs",
+              "RelativeToolTip": "Servc\\MainWorldSvc.cs",
+              "ViewState": "AgIAAA8BAAAAAAAAAAAAACEBAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T13:12:08.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "NetWorkTool.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Item\\NetWorkTool.cs",
+              "RelativeDocumentMoniker": "Item\\NetWorkTool.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Item\\NetWorkTool.cs",
+              "RelativeToolTip": "Item\\NetWorkTool.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAASwAwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T10:29:42.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Ilogic.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Interface\\Ilogic.cs",
+              "RelativeDocumentMoniker": "Interface\\Ilogic.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Interface\\Ilogic.cs",
+              "RelativeToolTip": "Interface\\Ilogic.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T13:27:49.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "FireExtinguishers.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Item\\FireExtinguishers.cs",
+              "RelativeDocumentMoniker": "Item\\FireExtinguishers.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Item\\FireExtinguishers.cs",
+              "RelativeToolTip": "Item\\FireExtinguishers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T10:47:45.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Document.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Item\\Document.cs",
+              "RelativeDocumentMoniker": "Item\\Document.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Item\\Document.cs",
+              "RelativeToolTip": "Item\\Document.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T09:09:40.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MathHouse.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\MathHouse.cs",
+              "RelativeDocumentMoniker": "Tools\\MathHouse.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\MathHouse.cs",
+              "RelativeToolTip": "Tools\\MathHouse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:11:38.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SignSvc.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Servc\\SignSvc.cs",
+              "RelativeDocumentMoniker": "Servc\\SignSvc.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Servc\\SignSvc.cs",
+              "RelativeToolTip": "Servc\\SignSvc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAApwAwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T06:52:33.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "TimerSvc.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Servc\\TimerSvc.cs",
+              "RelativeDocumentMoniker": "Servc\\TimerSvc.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Servc\\TimerSvc.cs",
+              "RelativeToolTip": "Servc\\TimerSvc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T06:57:05.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\IOCP\\packages.config",
+              "RelativeDocumentMoniker": "..\\..\\IOCP\\packages.config",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\IOCP\\packages.config",
+              "RelativeToolTip": "..\\..\\IOCP\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-23T07:12:43.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\packages.config",
+              "RelativeDocumentMoniker": "packages.config",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\packages.config",
+              "RelativeToolTip": "packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-23T02:29:47.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "INet.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Interface\\INet.cs",
+              "RelativeDocumentMoniker": "Interface\\INet.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Interface\\INet.cs",
+              "RelativeToolTip": "Interface\\INet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T09:43:24.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "app.config",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\IOCP\\app.config",
+              "RelativeDocumentMoniker": "..\\..\\IOCP\\app.config",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\IOCP\\app.config",
+              "RelativeToolTip": "..\\..\\IOCP\\app.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-22T09:07:26.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "XmlTool.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\XmlTool.cs",
+              "RelativeDocumentMoniker": "Tools\\XmlTool.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\XmlTool.cs",
+              "RelativeToolTip": "Tools\\XmlTool.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAEwDQAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T02:34:19.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-11T05:34:13.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "IService.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Interface\\IService.cs",
+              "RelativeDocumentMoniker": "Interface\\IService.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Interface\\IService.cs",
+              "RelativeToolTip": "Interface\\IService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T09:36:39.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Ilogic.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Interface\\Ilogic.cs",
+              "RelativeDocumentMoniker": "Interface\\Ilogic.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Interface\\Ilogic.cs",
+              "RelativeToolTip": "Interface\\Ilogic.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBAAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T03:30:28.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "LogTool.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\LogTool.cs",
+              "RelativeDocumentMoniker": "Tools\\LogTool.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Tools\\LogTool.cs",
+              "RelativeToolTip": "Tools\\LogTool.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAwwBEAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T05:52:45.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "AccSvc.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Servc\\AccSvc.cs",
+              "RelativeDocumentMoniker": "Servc\\AccSvc.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Servc\\AccSvc.cs",
+              "RelativeToolTip": "Servc\\AccSvc.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAADwvxsAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T05:53:29.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "GameContainer.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Client\\GameContainer.cs",
+              "RelativeDocumentMoniker": "Client\\GameContainer.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Client\\GameContainer.cs",
+              "RelativeToolTip": "Client\\GameContainer.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAiwCgAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T01:57:04.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "SPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Client\\SPlayer.cs",
+              "RelativeDocumentMoniker": "Client\\SPlayer.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Client\\SPlayer.cs",
+              "RelativeToolTip": "Client\\SPlayer.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAADwvxcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T03:37:29.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "OpenProgress.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\OpenProgress.cs",
+              "RelativeDocumentMoniker": "OpenProgress.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\OpenProgress.cs",
+              "RelativeToolTip": "OpenProgress.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAQwCYAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T06:13:26.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "PERoot.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\PERoot.cs",
+              "RelativeDocumentMoniker": "PERoot.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\PERoot.cs",
+              "RelativeToolTip": "PERoot.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAADwvxIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T05:47:06.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "IService.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Interface\\IService.cs",
+              "RelativeDocumentMoniker": "Interface\\IService.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Interface\\IService.cs",
+              "RelativeToolTip": "Interface\\IService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T06:12:22.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "INet.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Interface\\INet.cs",
+              "RelativeDocumentMoniker": "Interface\\INet.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Interface\\INet.cs",
+              "RelativeToolTip": "Interface\\INet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T14:03:50.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "TimerSvc.cs",
+              "DocumentMoniker": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Servc\\TimerSvc.cs",
+              "RelativeDocumentMoniker": "Servc\\TimerSvc.cs",
+              "ToolTip": "C:\\Users\\Nie\\Desktop\\Unity\u6210\u54C1\\World Server\\Servc\\TimerSvc.cs",
+              "RelativeToolTip": "Servc\\TimerSvc.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T06:00:37.641Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

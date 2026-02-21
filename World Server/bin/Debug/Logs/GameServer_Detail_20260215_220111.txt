@@ -1,0 +1,114 @@
+﻿[2026-02-15 22:01:11.735] [INFO] ========================================
+[2026-02-15 22:01:11.735] [INFO] GameCompany 服务端详细日志
+[2026-02-15 22:01:11.735] [INFO] 日志文件: Logs\GameServer_Detail_20260215_220111.txt
+[2026-02-15 22:01:11.735] [INFO] 开始时间: 2026-02-15 22:01:11
+[2026-02-15 22:01:11.735] [INFO] ========================================
+[2026-02-15 22:01:11.735] [INFO] 
+[2026-02-15 22:01:11.735] [INFO] LocalDataStorage 初始化开始
+[2026-02-15 22:01:11.735] [INFO] 数据目录: Data
+[2026-02-15 22:01:11.735] [INFO] 保存模式: Instant
+[2026-02-15 22:01:11.735] [INFO] 保存间隔: 24小时
+[2026-02-15 22:01:19.786] [INFO] [LocalStorage] StringSet 调用 - Key: company, Value长度: 219
+[2026-02-15 22:01:19.786] [INFO]   Value内容: {"CompName":"北的公司","CEO_ID":"UPgCmpna6seyUOJFkbo+Fw==","personCount_Company":0,"All_saveMoney":0.0,"CreatTime":"2026-02-15T22:01:19.7772965+08:00","jobs":[],"isListed":false,"LendMoney":0.0,"stocks":[...
+[2026-02-15 22:01:19.786] [INFO] [LocalStorage] StringSet 写入内存成功 - Key: company, 内存中共有 3 个String键
+[2026-02-15 22:01:19.786] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-15 22:01:19.788] [INFO] [LocalStorage] ====================================
+[2026-02-15 22:01:19.788] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-15 22:01:19.788] [INFO] [LocalStorage]   脏标记: True
+[2026-02-15 22:01:19.788] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-15 22:01:19.788] [INFO] [LocalStorage]   String键数: 3
+[2026-02-15 22:01:19.788] [INFO] [LocalStorage]   Hash表数: 1
+[2026-02-15 22:01:19.811] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-15 22:01:19.811] [INFO] [LocalStorage]   更新保存时间: 2026/2/15 22:01:19
+[2026-02-15 22:01:19.811] [INFO] [LocalStorage] ====================================
+[2026-02-15 22:01:25.260] [INFO] [LocalStorage] StringSet 调用 - Key: company, Value长度: 219
+[2026-02-15 22:01:25.260] [INFO]   Value内容: {"CompName":"北的公司","CEO_ID":"UPgCmpna6seyUOJFkbo+Fw==","personCount_Company":0,"All_saveMoney":0.0,"CreatTime":"2026-02-15T22:01:19.7772965+08:00","jobs":[],"isListed":false,"LendMoney":0.0,"stocks":[...
+[2026-02-15 22:01:25.260] [INFO] [LocalStorage] StringSet 写入内存成功 - Key: company, 内存中共有 3 个String键
+[2026-02-15 22:01:25.260] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-15 22:01:25.260] [INFO] [LocalStorage] ====================================
+[2026-02-15 22:01:25.260] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-15 22:01:25.260] [INFO] [LocalStorage]   脏标记: True
+[2026-02-15 22:01:25.260] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-15 22:01:25.260] [INFO] [LocalStorage]   String键数: 3
+[2026-02-15 22:01:25.260] [INFO] [LocalStorage]   Hash表数: 1
+[2026-02-15 22:01:25.263] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-15 22:01:25.263] [INFO] [LocalStorage]   更新保存时间: 2026/2/15 22:01:25
+[2026-02-15 22:01:25.263] [INFO] [LocalStorage] ====================================
+[2026-02-15 22:01:29.809] [INFO] [LocalStorage] StringSet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 129
+[2026-02-15 22:01:29.809] [INFO]   Value内容: {"elements":[{"name":"地板","UrlName":"BuildPrefab_Plane","UrlSpriteName":"DuiHuaKeMeng","UseMoney":15,"buildType":0}],"count":[1]}
+[2026-02-15 22:01:29.809] [INFO] [LocalStorage] StringSet 写入内存成功 - Key: UPgCmpna6seyUOJFkbo+Fw==, 内存中共有 3 个String键
+[2026-02-15 22:01:29.809] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-15 22:01:29.810] [INFO] [LocalStorage] ====================================
+[2026-02-15 22:01:29.810] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-15 22:01:29.810] [INFO] [LocalStorage]   脏标记: True
+[2026-02-15 22:01:29.810] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-15 22:01:29.810] [INFO] [LocalStorage]   String键数: 3
+[2026-02-15 22:01:29.810] [INFO] [LocalStorage]   Hash表数: 1
+[2026-02-15 22:01:29.812] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-15 22:01:29.812] [INFO] [LocalStorage]   更新保存时间: 2026/2/15 22:01:29
+[2026-02-15 22:01:29.812] [INFO] [LocalStorage] ====================================
+[2026-02-15 22:01:29.814] [INFO] [LocalStorage] StringSet 调用 - Key: company, Value长度: 221
+[2026-02-15 22:01:29.814] [INFO]   Value内容: {"CompName":"北的公司","CEO_ID":"UPgCmpna6seyUOJFkbo+Fw==","personCount_Company":0,"All_saveMoney":-15.0,"CreatTime":"2026-02-15T22:01:19.7772965+08:00","jobs":[],"isListed":false,"LendMoney":0.0,"stocks"...
+[2026-02-15 22:01:29.814] [INFO] [LocalStorage] StringSet 写入内存成功 - Key: company, 内存中共有 3 个String键
+[2026-02-15 22:01:29.814] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-15 22:01:29.814] [INFO] [LocalStorage] ====================================
+[2026-02-15 22:01:29.814] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-15 22:01:29.814] [INFO] [LocalStorage]   脏标记: True
+[2026-02-15 22:01:29.814] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-15 22:01:29.814] [INFO] [LocalStorage]   String键数: 3
+[2026-02-15 22:01:29.814] [INFO] [LocalStorage]   Hash表数: 1
+[2026-02-15 22:01:29.816] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-15 22:01:29.816] [INFO] [LocalStorage]   更新保存时间: 2026/2/15 22:01:29
+[2026-02-15 22:01:29.816] [INFO] [LocalStorage] ====================================
+[2026-02-15 22:01:36.154] [INFO] [LocalStorage] StringSet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 181
+[2026-02-15 22:01:36.154] [INFO]   Value内容: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":-0.2800886,"y":0.05,"z":-1.455966},"quaternionJson":{"x":2.05047268E-09,"y":-4.32708353E-18,"z":2.110286E-09,"w":1.0}}]}
+[2026-02-15 22:01:36.154] [INFO] [LocalStorage] StringSet 写入内存成功 - Key: UPgCmpna6seyUOJFkbo+Fw==, 内存中共有 3 个String键
+[2026-02-15 22:01:36.154] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-15 22:01:36.155] [INFO] [LocalStorage] ====================================
+[2026-02-15 22:01:36.155] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-15 22:01:36.155] [INFO] [LocalStorage]   脏标记: True
+[2026-02-15 22:01:36.155] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-15 22:01:36.155] [INFO] [LocalStorage]   String键数: 3
+[2026-02-15 22:01:36.155] [INFO] [LocalStorage]   Hash表数: 1
+[2026-02-15 22:01:36.157] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-15 22:01:36.157] [INFO] [LocalStorage]   更新保存时间: 2026/2/15 22:01:36
+[2026-02-15 22:01:36.157] [INFO] [LocalStorage] ====================================
+[2026-02-15 22:01:36.159] [INFO] [LocalStorage] StringSet 调用 - Key: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 26
+[2026-02-15 22:01:36.159] [INFO]   Value内容: {"elements":[],"count":[]}
+[2026-02-15 22:01:36.159] [INFO] [LocalStorage] StringSet 写入内存成功 - Key: UPgCmpna6seyUOJFkbo+Fw==, 内存中共有 3 个String键
+[2026-02-15 22:01:36.159] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-15 22:01:36.159] [INFO] [LocalStorage] ====================================
+[2026-02-15 22:01:36.159] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-15 22:01:36.159] [INFO] [LocalStorage]   脏标记: True
+[2026-02-15 22:01:36.159] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-15 22:01:36.159] [INFO] [LocalStorage]   String键数: 3
+[2026-02-15 22:01:36.159] [INFO] [LocalStorage]   Hash表数: 1
+[2026-02-15 22:01:36.162] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-15 22:01:36.162] [INFO] [LocalStorage]   更新保存时间: 2026/2/15 22:01:36
+[2026-02-15 22:01:36.162] [INFO] [LocalStorage] ====================================
+[2026-02-15 22:01:45.522] [INFO] [LocalStorage] StringSet 调用 - Key: company, Value长度: 219
+[2026-02-15 22:01:45.522] [INFO]   Value内容: {"CompName":"北的公司","CEO_ID":"UPgCmpna6seyUOJFkbo+Fw==","personCount_Company":0,"All_saveMoney":0.0,"CreatTime":"2026-02-15T22:01:45.5071605+08:00","jobs":[],"isListed":false,"LendMoney":0.0,"stocks":[...
+[2026-02-15 22:01:45.522] [INFO] [LocalStorage] StringSet 写入内存成功 - Key: company, 内存中共有 3 个String键
+[2026-02-15 22:01:45.523] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-15 22:01:45.523] [INFO] [LocalStorage] ====================================
+[2026-02-15 22:01:45.523] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-15 22:01:45.523] [INFO] [LocalStorage]   脏标记: True
+[2026-02-15 22:01:45.523] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-15 22:01:45.523] [INFO] [LocalStorage]   String键数: 3
+[2026-02-15 22:01:45.523] [INFO] [LocalStorage]   Hash表数: 1
+[2026-02-15 22:01:45.525] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-15 22:01:45.525] [INFO] [LocalStorage]   更新保存时间: 2026/2/15 22:01:45
+[2026-02-15 22:01:45.525] [INFO] [LocalStorage] ====================================
+[2026-02-15 22:01:49.420] [INFO] [LocalStorage] StringSet 调用 - Key: company, Value长度: 219
+[2026-02-15 22:01:49.420] [INFO]   Value内容: {"CompName":"北的公司","CEO_ID":"UPgCmpna6seyUOJFkbo+Fw==","personCount_Company":0,"All_saveMoney":0.0,"CreatTime":"2026-02-15T22:01:45.5071605+08:00","jobs":[],"isListed":false,"LendMoney":0.0,"stocks":[...
+[2026-02-15 22:01:49.420] [INFO] [LocalStorage] StringSet 写入内存成功 - Key: company, 内存中共有 3 个String键
+[2026-02-15 22:01:49.420] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-15 22:01:49.420] [INFO] [LocalStorage] ====================================
+[2026-02-15 22:01:49.420] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-15 22:01:49.420] [INFO] [LocalStorage]   脏标记: True
+[2026-02-15 22:01:49.420] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-15 22:01:49.420] [INFO] [LocalStorage]   String键数: 3
+[2026-02-15 22:01:49.420] [INFO] [LocalStorage]   Hash表数: 1
+[2026-02-15 22:01:49.423] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-15 22:01:49.423] [INFO] [LocalStorage]   更新保存时间: 2026/2/15 22:01:49
+[2026-02-15 22:01:49.423] [INFO] [LocalStorage] ====================================

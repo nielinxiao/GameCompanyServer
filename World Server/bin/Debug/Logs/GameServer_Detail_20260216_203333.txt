@@ -1,0 +1,79 @@
+﻿[2026-02-16 20:33:33.155] [INFO] ========================================
+[2026-02-16 20:33:33.155] [INFO] GameCompany 服务端详细日志
+[2026-02-16 20:33:33.155] [INFO] 日志文件: Logs\GameServer_Detail_20260216_203333.txt
+[2026-02-16 20:33:33.155] [INFO] 开始时间: 2026-02-16 20:33:33
+[2026-02-16 20:33:33.155] [INFO] ========================================
+[2026-02-16 20:33:33.155] [INFO] 
+[2026-02-16 20:33:33.155] [INFO] LocalDataStorage 初始化开始
+[2026-02-16 20:33:33.155] [INFO] 数据目录: Data
+[2026-02-16 20:33:33.155] [INFO] 保存模式: Instant
+[2026-02-16 20:33:33.155] [INFO] 保存间隔: 24小时
+[2026-02-16 20:33:33.203] [INFO] [LocalStorage] 加载String数据成功: 1 条记录
+[2026-02-16 20:33:33.204] [INFO] [LocalStorage] Hash文件读取成功，JSON长度: 25355字符
+[2026-02-16 20:33:33.215] [INFO] [LocalStorage] JSON反序列化成功，发现 21 个顶层键
+[2026-02-16 20:33:33.215] [INFO] [LocalStorage] 加载Hash数据成功: 21 个Hash表（JSON顶层键: 21, 跳过: 0）
+[2026-02-16 20:34:02.054] [INFO] [LocalStorage] HashSet 调用 - Key: player:test_user_probe, Field: name, Value长度: 5
+[2026-02-16 20:34:02.055] [INFO] [LocalStorage] HashSet Value预览: Probe
+[2026-02-16 20:34:02.055] [INFO] [LocalStorage] HashSet 写入内存成功 - Key: player:test_user_probe, Field: name, 该Hash表有 1 个字段, 内存中共有 22 个Hash表
+[2026-02-16 20:34:02.055] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-16 20:34:02.056] [INFO] [LocalStorage] ====================================
+[2026-02-16 20:34:02.056] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 20:34:02.056] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 20:34:02.056] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 20:34:02.056] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 20:34:02.056] [INFO] [LocalStorage]   Hash表数: 22
+[2026-02-16 20:34:02.064] [INFO] [LocalStorage] 建筑数据统计 - 含block字段的Hash表数量: 9, 样例: FuncTestUser_20260216_A(Length=139), AgentLiveTest_20260216_195514(Length=131), FuncTestUser_20260216_Z(Length=140), FuncTestUser_20260216_E1(Length=138), FuncTestUser_20260216_C(Length=44)
+[2026-02-16 20:34:02.066] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 20:34:02.066] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 20:34:02
+[2026-02-16 20:34:02.066] [INFO] [LocalStorage] ====================================
+[2026-02-16 20:34:02.066] [INFO] [LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[2026-02-16 20:34:02.066] [INFO] [LocalStorage] HashSet调用参数和返回值 - Key: player:test_user_probe, Field: name, Value长度: 5, SaveMode: Instant, SaveTriggered: True, SaveToDiskResult: True, Success: True
+[2026-02-16 20:34:02.067] [INFO] [LocalStorage] HashSet 调用 - Key: player:test_user_probe, Field: company, Value长度: 7
+[2026-02-16 20:34:02.067] [INFO] [LocalStorage] HashSet Value预览: ProbeCo
+[2026-02-16 20:34:02.067] [INFO] [LocalStorage] HashSet 写入内存成功 - Key: player:test_user_probe, Field: company, 该Hash表有 2 个字段, 内存中共有 22 个Hash表
+[2026-02-16 20:34:02.067] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-16 20:34:02.067] [INFO] [LocalStorage] ====================================
+[2026-02-16 20:34:02.067] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 20:34:02.067] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 20:34:02.067] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 20:34:02.067] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 20:34:02.067] [INFO] [LocalStorage]   Hash表数: 22
+[2026-02-16 20:34:02.071] [INFO] [LocalStorage] 建筑数据统计 - 含block字段的Hash表数量: 9, 样例: FuncTestUser_20260216_A(Length=139), AgentLiveTest_20260216_195514(Length=131), FuncTestUser_20260216_Z(Length=140), FuncTestUser_20260216_E1(Length=138), FuncTestUser_20260216_C(Length=44)
+[2026-02-16 20:34:02.073] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 20:34:02.073] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 20:34:02
+[2026-02-16 20:34:02.073] [INFO] [LocalStorage] ====================================
+[2026-02-16 20:34:02.073] [INFO] [LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[2026-02-16 20:34:02.073] [INFO] [LocalStorage] HashSet调用参数和返回值 - Key: player:test_user_probe, Field: company, Value长度: 7, SaveMode: Instant, SaveTriggered: True, SaveToDiskResult: True, Success: True
+[2026-02-16 20:34:02.073] [INFO] [LocalStorage] HashSet 调用 - Key: player:test_user_probe, Field: createTime, Value长度: 19
+[2026-02-16 20:34:02.073] [INFO] [LocalStorage] HashSet Value预览: 2026-02-16 20:34:02
+[2026-02-16 20:34:02.073] [INFO] [LocalStorage] HashSet 写入内存成功 - Key: player:test_user_probe, Field: createTime, 该Hash表有 3 个字段, 内存中共有 22 个Hash表
+[2026-02-16 20:34:02.073] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-16 20:34:02.074] [INFO] [LocalStorage] ====================================
+[2026-02-16 20:34:02.074] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 20:34:02.074] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 20:34:02.074] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 20:34:02.074] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 20:34:02.074] [INFO] [LocalStorage]   Hash表数: 22
+[2026-02-16 20:34:02.077] [INFO] [LocalStorage] 建筑数据统计 - 含block字段的Hash表数量: 9, 样例: FuncTestUser_20260216_A(Length=139), AgentLiveTest_20260216_195514(Length=131), FuncTestUser_20260216_Z(Length=140), FuncTestUser_20260216_E1(Length=138), FuncTestUser_20260216_C(Length=44)
+[2026-02-16 20:34:02.079] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 20:34:02.079] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 20:34:02
+[2026-02-16 20:34:02.079] [INFO] [LocalStorage] ====================================
+[2026-02-16 20:34:02.079] [INFO] [LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[2026-02-16 20:34:02.080] [INFO] [LocalStorage] HashSet调用参数和返回值 - Key: player:test_user_probe, Field: createTime, Value长度: 19, SaveMode: Instant, SaveTriggered: True, SaveToDiskResult: True, Success: True
+[2026-02-16 20:34:54.040] [INFO] [LocalStorage] HashSet 调用 - Key: build_test_20260216_203453, Field: block, Value长度: 254
+[2026-02-16 20:34:54.040] [INFO] [LocalStorage] HashSet Value预览: {"builds":[{"quaternionJson":{"y":0.7071068,"w":0.7071068,"z":0,"x":0},"nameUrl":"BuildPrefab_Plane","vector3Json":{"y":...
+[2026-02-16 20:34:54.040] [INFO] [LocalStorage] HashSet 写入内存成功 - Key: build_test_20260216_203453, Field: block, 该Hash表有 1 个字段, 内存中共有 23 个Hash表
+[2026-02-16 20:34:54.040] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-16 20:34:54.040] [INFO] [LocalStorage] ====================================
+[2026-02-16 20:34:54.040] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 20:34:54.040] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 20:34:54.040] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 20:34:54.040] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 20:34:54.040] [INFO] [LocalStorage]   Hash表数: 23
+[2026-02-16 20:34:54.044] [INFO] [LocalStorage] 建筑数据统计 - 含block字段的Hash表数量: 10, 样例: FuncTestUser_20260216_A(Length=139), AgentLiveTest_20260216_195514(Length=131), FuncTestUser_20260216_Z(Length=140), FuncTestUser_20260216_E1(Length=138), build_test_20260216_203453(Length=254)
+[2026-02-16 20:34:54.045] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 20:34:54.045] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 20:34:54
+[2026-02-16 20:34:54.045] [INFO] [LocalStorage] ====================================
+[2026-02-16 20:34:54.045] [INFO] [LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[2026-02-16 20:34:54.045] [INFO] [LocalStorage] HashSet调用参数和返回值 - Key: build_test_20260216_203453, Field: block, Value长度: 254, SaveMode: Instant, SaveTriggered: True, SaveToDiskResult: True, Success: True
+[2026-02-16 20:34:54.045] [INFO] [LocalStorage] Hash文件校验成功 - Key: build_test_20260216_203453, Field: block, Value长度: 254, Value预览: {"builds":[{"quaternionJson":{"y":0.7071068,"w":0.7071068,"z":0,"x":0},"nameUrl":"BuildPrefab_Plane","vector3Json":{"y":..., 文件: Data\hash_data.json

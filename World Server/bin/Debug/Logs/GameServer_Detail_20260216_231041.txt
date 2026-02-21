@@ -1,0 +1,136 @@
+﻿[2026-02-16 23:10:41.326] [INFO] ========================================
+[2026-02-16 23:10:41.326] [INFO] GameCompany 服务端详细日志
+[2026-02-16 23:10:41.326] [INFO] 日志文件: Logs\GameServer_Detail_20260216_231041.txt
+[2026-02-16 23:10:41.326] [INFO] 开始时间: 2026-02-16 23:10:41
+[2026-02-16 23:10:41.326] [INFO] ========================================
+[2026-02-16 23:10:41.326] [INFO] 
+[2026-02-16 23:10:41.326] [INFO] LocalDataStorage 初始化开始
+[2026-02-16 23:10:41.326] [INFO] 数据目录: Data
+[2026-02-16 23:10:41.326] [INFO] 保存模式: Instant
+[2026-02-16 23:10:41.326] [INFO] 保存间隔: 24小时
+[2026-02-16 23:10:41.373] [INFO] [LocalStorage] 加载String数据成功: 1 条记录
+[2026-02-16 23:10:41.373] [INFO] [LocalStorage] Hash文件读取成功，JSON长度: 26260字符
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage] JSON反序列化成功，发现 25 个顶层键
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: company, 字段数: 1, 包含block: False
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: player:FuncTestUser_20260216_A, 字段数: 3, 包含block: False
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_A, 字段数: 1, 包含block: True
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [建筑字段] Hash表: FuncTestUser_20260216_A, block长度: 139, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":3.14,"y":0.05,"z":-1.23},"quaternionJson":{"x":0.0,"y":0.0,...
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: AgentLiveTest_20260216_195514, 字段数: 1, 包含block: True
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [建筑字段] Hash表: AgentLiveTest_20260216_195514, block长度: 131, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":1.11,"y":0.05,"z":-2.22},"quaternionJson":{"x":0,"y":0,"z":...
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_Z, 字段数: 1, 包含block: True
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [建筑字段] Hash表: FuncTestUser_20260216_Z, block长度: 140, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":12.34,"y":0.05,"z":-6.78},"quaternionJson":{"x":0.0,"y":0.0...
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_204420_AI, 字段数: 1, 包含block: True
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [建筑字段] Hash表: FuncTestUser_20260216_204420_AI, block长度: 180, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":2.22,"y":0.05,"z":-3.33},"quaternionJson":{"x":0.0,"y":0.0,...
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_E1, 字段数: 1, 包含block: True
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [建筑字段] Hash表: FuncTestUser_20260216_E1, block长度: 138, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":8.88,"y":0.05,"z":9.99},"quaternionJson":{"x":0.0,"y":0.0,"...
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: player:FuncTestUser_20260216_204420_AI, 字段数: 3, 包含block: False
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: build_test_20260216_203453, 字段数: 1, 包含block: True
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [建筑字段] Hash表: build_test_20260216_203453, block长度: 254, block预览: {"builds":[{"quaternionJson":{"y":0.7071068,"w":0.7071068,"z":0,"x":0},"nameUrl":"BuildPrefab_Plane","vector3Json":{"y":...
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: player:, 字段数: 3, 包含block: False
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: player: , 字段数: 3, 包含block: False
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: player:AgentLiveTest_20260216_195514, 字段数: 3, 包含block: False
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: player:FuncTestUser_20260216_RT3, 字段数: 3, 包含block: False
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_C, 字段数: 1, 包含block: True
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [建筑字段] Hash表: FuncTestUser_20260216_C, block长度: 44, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane"}]}
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: , 字段数: 1, 包含block: False
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_RT1, 字段数: 1, 包含block: True
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [建筑字段] Hash表: FuncTestUser_20260216_RT1, block长度: 139, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":5.55,"y":0.05,"z":-7.77},"quaternionJson":{"x":0.0,"y":0.0,...
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: player:UPgCmpna6seyUOJFkbo+Fw==, 字段数: 3, 包含block: False
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_RT3, 字段数: 1, 包含block: True
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [建筑字段] Hash表: FuncTestUser_20260216_RT3, block长度: 139, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":9.91,"y":0.05,"z":-3.33},"quaternionJson":{"x":0.0,"y":0.0,...
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: player:   , 字段数: 3, 包含block: False
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: player:	, 字段数: 3, 包含block: False
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: player:  , 字段数: 3, 包含block: False
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: UPgCmpna6seyUOJFkbo+Fw==, 字段数: 5, 包含block: True
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [建筑字段] Hash表: UPgCmpna6seyUOJFkbo+Fw==, block长度: 306, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":1.25,"y":0.05,"z":-2.5},"quaternionJson":{"x":0.0,"y":0.0,"...
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: player:test_user_probe, 字段数: 3, 包含block: False
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: player:AgentTest_20260216_194627, 字段数: 3, 包含block: False
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [已加载] Hash表: AgentTest_20260216_194627, 字段数: 1, 包含block: True
+[2026-02-16 23:10:41.385] [INFO] [LocalStorage]   [建筑字段] Hash表: AgentTest_20260216_194627, block长度: 132, block预览: [{"buildName":"BuildPrefab_Plane","position":{"x":1.1,"y":0.0,"z":2.2},"rotation":{"x":0,"y":45,"z":0},"scale":{"x":1,"y...
+[2026-02-16 23:10:41.389] [INFO] [LocalStorage] 加载Hash数据成功: 25 个Hash表（JSON顶层键: 25, 跳过: 0）
+[2026-02-16 23:10:41.389] [INFO] [LocalStorage] Hash加载建筑统计 - 含block字段Hash表: 11, 样例: FuncTestUser_20260216_A(Length=139), AgentLiveTest_20260216_195514(Length=131), FuncTestUser_20260216_Z(Length=140), FuncTestUser_20260216_204420_AI(Length=180), FuncTestUser_20260216_E1(Length=138)
+[2026-02-16 23:10:58.107] [INFO] [LocalStorage] HashSet 调用 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222
+[2026-02-16 23:10:58.107] [INFO] [LocalStorage] HashSet Value预览: {"CompName":"北的公司","CEO_ID":"UPgCmpna6seyUOJFkbo+Fw==","personCount_Company":0,"All_saveMoney":-225.0,"CreatTime":"2026-...
+[2026-02-16 23:10:58.107] [INFO] [LocalStorage] HashSet 写入内存成功 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, 该Hash表有 1 个字段, 内存中共有 25 个Hash表
+[2026-02-16 23:10:58.107] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-16 23:10:58.108] [INFO] [LocalStorage] ====================================
+[2026-02-16 23:10:58.108] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 23:10:58.108] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 23:10:58.108] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 23:10:58.108] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 23:10:58.108] [INFO] [LocalStorage]   Hash表数: 25
+[2026-02-16 23:10:58.111] [INFO] [LocalStorage] 建筑数据统计 - 含block字段的Hash表数量: 11, 样例: AgentLiveTest_20260216_195514(Length=131), FuncTestUser_20260216_A(Length=139), FuncTestUser_20260216_Z(Length=140), FuncTestUser_20260216_204420_AI(Length=180), FuncTestUser_20260216_E1(Length=138)
+[2026-02-16 23:10:58.112] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 23:10:58.112] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 23:10:58
+[2026-02-16 23:10:58.112] [INFO] [LocalStorage] ====================================
+[2026-02-16 23:10:58.112] [INFO] [LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[2026-02-16 23:10:58.112] [INFO] [LocalStorage] HashSet调用参数和返回值 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222, SaveMode: Instant, SaveTriggered: True, SaveToDiskResult: True, Success: True
+[2026-02-16 23:10:58.114] [INFO] [LocalStorage] Hash文件校验成功 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222, Value预览: {"CompName":"北的公司","CEO_ID":"UPgCmpna6seyUOJFkbo+Fw==","personCount_Company":0,"All_saveMoney":-225.0,"CreatTime":"2026-..., 文件: Data\hash_data.json
+[2026-02-16 23:11:45.949] [INFO] [LocalStorage] HashSet 调用 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222
+[2026-02-16 23:11:45.949] [INFO] [LocalStorage] HashSet Value预览: {"CompName":"北的公司","CEO_ID":"UPgCmpna6seyUOJFkbo+Fw==","personCount_Company":0,"All_saveMoney":-225.0,"CreatTime":"2026-...
+[2026-02-16 23:11:45.949] [INFO] [LocalStorage] HashSet 写入内存成功 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, 该Hash表有 1 个字段, 内存中共有 25 个Hash表
+[2026-02-16 23:11:45.949] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-16 23:11:45.949] [INFO] [LocalStorage] ====================================
+[2026-02-16 23:11:45.949] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 23:11:45.949] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 23:11:45.949] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 23:11:45.949] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 23:11:45.949] [INFO] [LocalStorage]   Hash表数: 25
+[2026-02-16 23:11:45.950] [INFO] [LocalStorage] 建筑数据统计 - 含block字段的Hash表数量: 11, 样例: AgentLiveTest_20260216_195514(Length=131), FuncTestUser_20260216_A(Length=139), FuncTestUser_20260216_Z(Length=140), FuncTestUser_20260216_204420_AI(Length=180), FuncTestUser_20260216_E1(Length=138)
+[2026-02-16 23:11:45.950] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 23:11:45.950] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 23:11:45
+[2026-02-16 23:11:45.950] [INFO] [LocalStorage] ====================================
+[2026-02-16 23:11:45.950] [INFO] [LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[2026-02-16 23:11:45.950] [INFO] [LocalStorage] HashSet调用参数和返回值 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222, SaveMode: Instant, SaveTriggered: True, SaveToDiskResult: True, Success: True
+[2026-02-16 23:11:45.951] [INFO] [LocalStorage] Hash文件校验成功 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222, Value预览: {"CompName":"北的公司","CEO_ID":"UPgCmpna6seyUOJFkbo+Fw==","personCount_Company":0,"All_saveMoney":-225.0,"CreatTime":"2026-..., 文件: Data\hash_data.json
+[2026-02-16 23:11:50.133] [INFO] [LocalStorage] HashSet 调用 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222
+[2026-02-16 23:11:50.133] [INFO] [LocalStorage] HashSet Value预览: {"CompName":"北的公司","CEO_ID":"UPgCmpna6seyUOJFkbo+Fw==","personCount_Company":0,"All_saveMoney":-225.0,"CreatTime":"2026-...
+[2026-02-16 23:11:50.133] [INFO] [LocalStorage] HashSet 写入内存成功 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, 该Hash表有 1 个字段, 内存中共有 25 个Hash表
+[2026-02-16 23:11:50.133] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-16 23:11:50.133] [INFO] [LocalStorage] ====================================
+[2026-02-16 23:11:50.133] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 23:11:50.133] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 23:11:50.133] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 23:11:50.133] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 23:11:50.133] [INFO] [LocalStorage]   Hash表数: 25
+[2026-02-16 23:11:50.133] [INFO] [LocalStorage] 建筑数据统计 - 含block字段的Hash表数量: 11, 样例: AgentLiveTest_20260216_195514(Length=131), FuncTestUser_20260216_A(Length=139), FuncTestUser_20260216_Z(Length=140), FuncTestUser_20260216_204420_AI(Length=180), FuncTestUser_20260216_E1(Length=138)
+[2026-02-16 23:11:50.134] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 23:11:50.134] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 23:11:50
+[2026-02-16 23:11:50.134] [INFO] [LocalStorage] ====================================
+[2026-02-16 23:11:50.134] [INFO] [LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[2026-02-16 23:11:50.134] [INFO] [LocalStorage] HashSet调用参数和返回值 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222, SaveMode: Instant, SaveTriggered: True, SaveToDiskResult: True, Success: True
+[2026-02-16 23:11:50.135] [INFO] [LocalStorage] Hash文件校验成功 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 222, Value预览: {"CompName":"北的公司","CEO_ID":"UPgCmpna6seyUOJFkbo+Fw==","personCount_Company":0,"All_saveMoney":-225.0,"CreatTime":"2026-..., 文件: Data\hash_data.json
+[2026-02-16 23:12:13.813] [INFO] [LocalStorage] HashSet 调用 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 227
+[2026-02-16 23:12:13.813] [INFO] [LocalStorage] HashSet Value预览: {"CompName":"北的公司","CEO_ID":"UPgCmpna6seyUOJFkbo+Fw==","personCount_Company":0,"All_saveMoney":-225.0,"CreatTime":"2026-...
+[2026-02-16 23:12:13.813] [INFO] [LocalStorage] HashSet 写入内存成功 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, 该Hash表有 1 个字段, 内存中共有 25 个Hash表
+[2026-02-16 23:12:13.813] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-16 23:12:13.813] [INFO] [LocalStorage] ====================================
+[2026-02-16 23:12:13.813] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 23:12:13.816] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 23:12:13.816] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 23:12:13.816] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 23:12:13.816] [INFO] [LocalStorage]   Hash表数: 25
+[2026-02-16 23:12:13.816] [INFO] [LocalStorage] 建筑数据统计 - 含block字段的Hash表数量: 11, 样例: AgentLiveTest_20260216_195514(Length=131), FuncTestUser_20260216_A(Length=139), FuncTestUser_20260216_Z(Length=140), FuncTestUser_20260216_204420_AI(Length=180), FuncTestUser_20260216_E1(Length=138)
+[2026-02-16 23:12:13.817] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 23:12:13.817] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 23:12:13
+[2026-02-16 23:12:13.817] [INFO] [LocalStorage] ====================================
+[2026-02-16 23:12:13.817] [INFO] [LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[2026-02-16 23:12:13.817] [INFO] [LocalStorage] HashSet调用参数和返回值 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 227, SaveMode: Instant, SaveTriggered: True, SaveToDiskResult: True, Success: True
+[2026-02-16 23:12:13.818] [INFO] [LocalStorage] Hash文件校验成功 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 227, Value预览: {"CompName":"北的公司","CEO_ID":"UPgCmpna6seyUOJFkbo+Fw==","personCount_Company":0,"All_saveMoney":-225.0,"CreatTime":"2026-..., 文件: Data\hash_data.json
+[2026-02-16 23:12:27.357] [INFO] [LocalStorage] HashSet 调用 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 227
+[2026-02-16 23:12:27.357] [INFO] [LocalStorage] HashSet Value预览: {"CompName":"北的公司","CEO_ID":"UPgCmpna6seyUOJFkbo+Fw==","personCount_Company":0,"All_saveMoney":-225.0,"CreatTime":"2026-...
+[2026-02-16 23:12:27.357] [INFO] [LocalStorage] HashSet 写入内存成功 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, 该Hash表有 1 个字段, 内存中共有 25 个Hash表
+[2026-02-16 23:12:27.357] [INFO] [LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()
+[2026-02-16 23:12:27.357] [INFO] [LocalStorage] ====================================
+[2026-02-16 23:12:27.357] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 23:12:27.357] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 23:12:27.357] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 23:12:27.357] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 23:12:27.357] [INFO] [LocalStorage]   Hash表数: 25
+[2026-02-16 23:12:27.358] [INFO] [LocalStorage] 建筑数据统计 - 含block字段的Hash表数量: 11, 样例: AgentLiveTest_20260216_195514(Length=131), FuncTestUser_20260216_A(Length=139), FuncTestUser_20260216_Z(Length=140), FuncTestUser_20260216_204420_AI(Length=180), FuncTestUser_20260216_E1(Length=138)
+[2026-02-16 23:12:27.358] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 23:12:27.358] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 23:12:27
+[2026-02-16 23:12:27.358] [INFO] [LocalStorage] ====================================
+[2026-02-16 23:12:27.358] [INFO] [LocalStorage] 立即保存模式 - SaveToDisk() 返回: True
+[2026-02-16 23:12:27.358] [INFO] [LocalStorage] HashSet调用参数和返回值 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 227, SaveMode: Instant, SaveTriggered: True, SaveToDiskResult: True, Success: True
+[2026-02-16 23:12:27.359] [INFO] [LocalStorage] Hash文件校验成功 - Key: company, Field: UPgCmpna6seyUOJFkbo+Fw==, Value长度: 227, Value预览: {"CompName":"北的公司","CEO_ID":"UPgCmpna6seyUOJFkbo+Fw==","personCount_Company":0,"All_saveMoney":-225.0,"CreatTime":"2026-..., 文件: Data\hash_data.json

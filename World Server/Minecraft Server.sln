@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Word Sever", "Word Sever.csproj", "{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOCP", "..\IOCP\IOCP.csproj", "{1D0263EC-E678-4ED1-B5C9-54AA62106F4D}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "壁垒服务器", "..\MinecraftServerSetup (2)\MinecraftServerSetup.vdproj", "{E9038139-31E2-4934-BFC0-8A941AE9A586}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D0263EC-E678-4ED1-B5C9-54AA62106F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D0263EC-E678-4ED1-B5C9-54AA62106F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D0263EC-E678-4ED1-B5C9-54AA62106F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D0263EC-E678-4ED1-B5C9-54AA62106F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9038139-31E2-4934-BFC0-8A941AE9A586}.Debug|Any CPU.ActiveCfg = Debug
+		{E9038139-31E2-4934-BFC0-8A941AE9A586}.Debug|Any CPU.Build.0 = Debug
+		{E9038139-31E2-4934-BFC0-8A941AE9A586}.Release|Any CPU.ActiveCfg = Release
+		{E9038139-31E2-4934-BFC0-8A941AE9A586}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D37C3585-7DAF-41BA-8F6F-30C1C93D2A85}
+	EndGlobalSection
+EndGlobal

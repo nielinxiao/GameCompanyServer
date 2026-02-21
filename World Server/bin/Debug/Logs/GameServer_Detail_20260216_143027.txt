@@ -1,0 +1,78 @@
+﻿[2026-02-16 14:30:27.784] [INFO] ========================================
+[2026-02-16 14:30:27.784] [INFO] GameCompany 服务端详细日志
+[2026-02-16 14:30:27.784] [INFO] 日志文件: Logs\GameServer_Detail_20260216_143027.txt
+[2026-02-16 14:30:27.784] [INFO] 开始时间: 2026-02-16 14:30:27
+[2026-02-16 14:30:27.784] [INFO] ========================================
+[2026-02-16 14:30:27.784] [INFO] 
+[2026-02-16 14:30:27.784] [INFO] LocalDataStorage 初始化开始
+[2026-02-16 14:30:27.784] [INFO] 数据目录: Data
+[2026-02-16 14:30:27.784] [INFO] 保存模式: Instant
+[2026-02-16 14:30:27.784] [INFO] 保存间隔: 24小时
+[2026-02-16 14:30:27.830] [INFO] [LocalStorage] 加载String数据成功: 1 条记录
+[2026-02-16 14:30:27.830] [INFO] [LocalStorage]   - Key: money, Value长度: 4
+[2026-02-16 14:30:27.833] [INFO] [LocalStorage] 加载Hash数据成功: 2 个Hash表
+[2026-02-16 14:30:27.833] [INFO] [LocalStorage]   - Hash表: player:UPgCmpna6seyUOJFkbo+Fw==, 字段数: 3
+[2026-02-16 14:30:27.833] [INFO] [LocalStorage]   - Hash表: UPgCmpna6seyUOJFkbo+Fw==, 字段数: 2
+[2026-02-16 14:31:11.258] [INFO] [LocalStorage] ====================================
+[2026-02-16 14:31:11.258] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 14:31:11.258] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 14:31:11.258] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 14:31:11.258] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 14:31:11.258] [INFO] [LocalStorage]   Hash表数: 3
+[2026-02-16 14:31:11.278] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 14:31:11.278] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 14:31:11
+[2026-02-16 14:31:11.278] [INFO] [LocalStorage] ====================================
+[2026-02-16 14:31:20.150] [INFO] [LocalStorage] ====================================
+[2026-02-16 14:31:20.150] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 14:31:20.150] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 14:31:20.150] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 14:31:20.150] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 14:31:20.150] [INFO] [LocalStorage]   Hash表数: 3
+[2026-02-16 14:31:20.155] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 14:31:20.155] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 14:31:20
+[2026-02-16 14:31:20.155] [INFO] [LocalStorage] ====================================
+[2026-02-16 14:31:23.436] [INFO] [LocalStorage] ====================================
+[2026-02-16 14:31:23.436] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 14:31:23.436] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 14:31:23.436] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 14:31:23.436] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 14:31:23.436] [INFO] [LocalStorage]   Hash表数: 3
+[2026-02-16 14:31:23.438] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 14:31:23.438] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 14:31:23
+[2026-02-16 14:31:23.438] [INFO] [LocalStorage] ====================================
+[2026-02-16 14:31:23.441] [INFO] [LocalStorage] ====================================
+[2026-02-16 14:31:23.441] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 14:31:23.441] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 14:31:23.441] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 14:31:23.441] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 14:31:23.441] [INFO] [LocalStorage]   Hash表数: 3
+[2026-02-16 14:31:23.444] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 14:31:23.444] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 14:31:23
+[2026-02-16 14:31:23.444] [INFO] [LocalStorage] ====================================
+[2026-02-16 14:31:36.813] [INFO] [LocalStorage] ====================================
+[2026-02-16 14:31:36.813] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 14:31:36.813] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 14:31:36.813] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 14:31:36.813] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 14:31:36.813] [INFO] [LocalStorage]   Hash表数: 3
+[2026-02-16 14:31:36.816] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 14:31:36.816] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 14:31:36
+[2026-02-16 14:31:36.816] [INFO] [LocalStorage] ====================================
+[2026-02-16 14:31:36.817] [INFO] [LocalStorage] ====================================
+[2026-02-16 14:31:36.817] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 14:31:36.817] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 14:31:36.817] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 14:31:36.817] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 14:31:36.817] [INFO] [LocalStorage]   Hash表数: 3
+[2026-02-16 14:31:36.819] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 14:31:36.819] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 14:31:36
+[2026-02-16 14:31:36.819] [INFO] [LocalStorage] ====================================
+[2026-02-16 14:31:48.640] [INFO] [LocalStorage] ====================================
+[2026-02-16 14:31:48.640] [INFO] [LocalStorage] SaveToDisk 开始
+[2026-02-16 14:31:48.640] [INFO] [LocalStorage]   脏标记: True
+[2026-02-16 14:31:48.640] [INFO] [LocalStorage]   保存模式: Instant
+[2026-02-16 14:31:48.640] [INFO] [LocalStorage]   String键数: 1
+[2026-02-16 14:31:48.640] [INFO] [LocalStorage]   Hash表数: 3
+[2026-02-16 14:31:48.643] [INFO] [LocalStorage]   >>> 数据保存成功 <<<
+[2026-02-16 14:31:48.643] [INFO] [LocalStorage]   更新保存时间: 2026/2/16 14:31:48
+[2026-02-16 14:31:48.643] [INFO] [LocalStorage] ====================================

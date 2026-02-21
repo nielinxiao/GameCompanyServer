@@ -1,0 +1,50 @@
+﻿[2026-02-16 20:08:35.831] [INFO] ========================================
+[2026-02-16 20:08:35.831] [INFO] GameCompany 服务端详细日志
+[2026-02-16 20:08:35.831] [INFO] 日志文件: Logs\GameServer_Detail_20260216_200835.txt
+[2026-02-16 20:08:35.831] [INFO] 开始时间: 2026-02-16 20:08:35
+[2026-02-16 20:08:35.831] [INFO] ========================================
+[2026-02-16 20:08:35.831] [INFO] 
+[2026-02-16 20:08:35.831] [INFO] LocalDataStorage 初始化开始
+[2026-02-16 20:08:35.831] [INFO] 数据目录: Data
+[2026-02-16 20:08:35.831] [INFO] 保存模式: Instant
+[2026-02-16 20:08:35.831] [INFO] 保存间隔: 24小时
+[2026-02-16 20:08:35.879] [INFO] [LocalStorage] 加载String数据成功: 1 条记录
+[2026-02-16 20:08:35.880] [INFO] [LocalStorage]   - Key: money, Value长度: 4
+[2026-02-16 20:08:35.880] [INFO] [LocalStorage] Hash文件读取成功，JSON长度: 24664字符
+[2026-02-16 20:08:35.891] [INFO] [LocalStorage] JSON反序列化成功，发现 17 个顶层键
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: UPgCmpna6seyUOJFkbo+Fw==, 字段数: 5
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_E1, 字段数: 1
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: player:, 字段数: 3
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: , 字段数: 1
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: player:AgentTest_20260216_194627, 字段数: 3
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: company, 字段数: 1
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: player:  , 字段数: 3
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_A, 字段数: 1
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: player:AgentLiveTest_20260216_195514, 字段数: 3
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: player: , 字段数: 3
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: player:FuncTestUser_20260216_A, 字段数: 3
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: AgentLiveTest_20260216_195514, 字段数: 1
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_Z, 字段数: 1
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: player:	, 字段数: 3
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: AgentTest_20260216_194627, 字段数: 1
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: player:UPgCmpna6seyUOJFkbo+Fw==, 字段数: 3
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_C, 字段数: 1
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage] 加载Hash数据成功: 17 个Hash表（JSON顶层键: 17, 跳过: 0）
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage] === 内存中的Hash表最终列表 ===
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   - Hash表: player:UPgCmpna6seyUOJFkbo+Fw==, 字段数: 3
+[2026-02-16 20:08:35.892] [INFO] [LocalStorage]   - Hash表: player:  , 字段数: 3
+[2026-02-16 20:08:35.894] [INFO] [LocalStorage]   - Hash表: player:	, 字段数: 3
+[2026-02-16 20:08:35.894] [INFO] [LocalStorage]   - Hash表: player: , 字段数: 3
+[2026-02-16 20:08:35.894] [INFO] [LocalStorage]   - Hash表: AgentLiveTest_20260216_195514, 字段数: 1
+[2026-02-16 20:08:35.894] [INFO] [LocalStorage]   - Hash表: FuncTestUser_20260216_A, 字段数: 1
+[2026-02-16 20:08:35.894] [INFO] [LocalStorage]   - Hash表: FuncTestUser_20260216_E1, 字段数: 1
+[2026-02-16 20:08:35.894] [INFO] [LocalStorage]   - Hash表: player:FuncTestUser_20260216_A, 字段数: 3
+[2026-02-16 20:08:35.894] [INFO] [LocalStorage]   - Hash表: FuncTestUser_20260216_C, 字段数: 1
+[2026-02-16 20:08:35.894] [INFO] [LocalStorage]   - Hash表: FuncTestUser_20260216_Z, 字段数: 1
+[2026-02-16 20:08:35.894] [INFO] [LocalStorage]   - Hash表: AgentTest_20260216_194627, 字段数: 1
+[2026-02-16 20:08:35.894] [INFO] [LocalStorage]   - Hash表: player:AgentLiveTest_20260216_195514, 字段数: 3
+[2026-02-16 20:08:35.894] [INFO] [LocalStorage]   - Hash表: UPgCmpna6seyUOJFkbo+Fw==, 字段数: 5
+[2026-02-16 20:08:35.894] [INFO] [LocalStorage]   - Hash表: company, 字段数: 1
+[2026-02-16 20:08:35.894] [INFO] [LocalStorage]   - Hash表: player:, 字段数: 3
+[2026-02-16 20:08:35.894] [INFO] [LocalStorage]   - Hash表: , 字段数: 1
+[2026-02-16 20:08:35.894] [INFO] [LocalStorage]   - Hash表: player:AgentTest_20260216_194627, 字段数: 3

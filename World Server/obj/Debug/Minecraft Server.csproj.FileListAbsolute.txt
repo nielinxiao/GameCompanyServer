@@ -1,0 +1,14 @@
+C:\Users\Nie\Desktop\Minecraft Server\obj\Debug\Minecraft Server.csproj.AssemblyReference.cache
+C:\Users\Nie\Desktop\Minecraft Server\obj\Debug\Minecraft Server.csproj.SuggestedBindingRedirects.cache
+C:\Users\Nie\Desktop\Minecraft Server\obj\Debug\Minecraft Server.csproj.CoreCompileInputs.cache
+C:\Users\Nie\Desktop\Minecraft Server\bin\Debug\Minecraft Server.exe.config
+C:\Users\Nie\Desktop\Minecraft Server\bin\Debug\Minecraft Server.exe
+C:\Users\Nie\Desktop\Minecraft Server\bin\Debug\Minecraft Server.pdb
+C:\Users\Nie\Desktop\Minecraft Server\obj\Debug\Minecraft Server.exe
+C:\Users\Nie\Desktop\Minecraft Server\obj\Debug\Minecraft Server.pdb
+C:\Users\Nie\Desktop\Minecraft Server\bin\Debug\Message.dll
+C:\Users\Nie\Desktop\Minecraft Server\obj\Debug\Minecraft Server.csproj.CopyComplete
+C:\Users\Nie\Desktop\Minecraft Server\bin\Debug\Message.pdb
+C:\Users\Nie\Desktop\Minecraft Server\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Nie\Desktop\Minecraft Server\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Nie\Desktop\Minecraft Server\bin\Debug\Newtonsoft.Json.xml

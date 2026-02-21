@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minecraft Server", "Minecraft Server.csproj", "{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MinecraftServerSetup", "..\MinecraftServerSetup\MinecraftServerSetup.vdproj", "{E32E819B-1994-468C-B258-4691026E09FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D7DB03B-2AE6-4AC2-A8C8-A7530DAD8A8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E32E819B-1994-468C-B258-4691026E09FD}.Debug|Any CPU.ActiveCfg = Debug
+		{E32E819B-1994-468C-B258-4691026E09FD}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D37C3585-7DAF-41BA-8F6F-30C1C93D2A85}
+	EndGlobalSection
+EndGlobal

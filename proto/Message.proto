@@ -1,0 +1,155 @@
+syntax = "proto2";
+package Message;
+enum CMD
+{
+    //loginc
+    AccSvc_Regist=1;
+    AccSvc_Join=2;
+    AccSvc_TimeSync=3;
+    MainBattleSvc_Search=4;
+    MainBattleSvc_AllowEnter=5;
+    MainBattleSvc_RefuseEnter=6;
+    //world
+    World_RegistPlayer=7;
+    World_Move=8;
+    World_Fire=9;
+    World_AddBuffer=10;
+    World_Score=11;
+    World_Grab=12;
+    World_Throw=13;
+    World_UnItemFire=14;
+    World_ItemFire=15;
+    World_SitDown=16;
+    World_PowerStopFire=17;
+    World_EndTimeAsync=18;
+    World_WaitPlayer=19;
+    World_FireSpawn=20;
+    World_Iteraction=21;
+    World_FireWinner=22;
+    World_UnFireWinner=23;
+    World_Mark=24;
+    World_PlayerFireSelf=25;
+    World_PlayerUnFireSelf=26;
+    World_ToolTimeAdd=27;
+    World_Jump=28;
+    World_GameStart=29;
+    World_GameStartUnFireSpawn=30;
+    World_PlayerDeathDown=31;
+    World_PlayerDamage=32;
+    World_PlayerSave=33;
+    World_RobotMove=34;
+    World_PropSpawn=35;
+    World_PropGrab=36;
+    World_RobotOpen=37;
+    World_RobotFire=38;
+    World_RobotUnFire=39;
+    World_Exit=40;
+
+    //Mysql
+    Mysql_login=20;
+    Mysql_Quit=21;
+}
+message  Login_PCK {
+    required Head head = 1;
+    required Login_Body body = 2;
+}
+message  Voice_PCK {
+    required Voice_Body body = 1;
+}
+message Head {
+    required CMD cmd=1;
+}
+message Login_Body {
+//Account
+    required string uid=1;
+    optional string Nickname=2;
+    optional int32 worldID=3;
+//MainBattleSvc
+    optional string battleIp=4;
+    optional int32 battleport=5;
+    repeated Player players=6;
+    optional int64 DateTime=7;
+    optional string VoiceIp=8;
+    optional int32 Voiceport=9;
+    optional int32 playerCount=10;
+    optional bool IsFull=11;
+    optional int32 TeamID=12;
+    optional string token=13;
+}
+message Voice_Body
+{
+    repeated float audioFloat = 1;
+    required string  Uid=2;
+    required string  NickName=3;
+}
+message  Mysql_PCK {
+    required Head  head = 1;
+    required Mysql_Body body=2;
+}
+message Mysql_Body {
+    required string uid=1;
+    required string password=2;
+    required string token=3;
+    required bool Successful=4;
+}
+message Player{
+    required string uid=1;
+    required string nickName=2;
+    optional int32 TeamId=4;
+    optional Vector3 position=5;
+    optional Vector3 moveDir=6;
+    optional Vector3 rotation=7;
+    optional bool IsMove=9;
+    optional int64 DateTime=10;
+    optional float currentspeed=11;
+    optional Vector3 Headrotation=12;
+}
+message World_PCK {
+    required Head  head = 1;
+    required World_Body body=2;
+}
+message World_Body {
+    required string uid=1;
+    optional Vector3 position=2;
+    optional Vector3 moveDir=3;
+    optional Vector3 rotation=4;
+    optional bool IsFire=5;
+    optional bool IsMove=6;
+    optional bool IsFast=7;
+    optional int32 GrabItemID=10;
+    optional int64 DateTime=11;
+    repeated Player players=12;
+    required int32 score=13;
+    required string nickName=14;
+    repeated ToolConfig tools=15;
+    optional int32 itemID=16;
+    optional Vector3 Headrotation=17;
+    optional bool IsSitDown=18;
+    optional string EndTime=19;
+    optional int32 WaiterNowPlayerCount=20;
+    optional int32 WaiterMax=21;
+    optional bool IsLocalNetwork=22;
+    optional int32 TeamID=23;
+    optional string MarkString=24;
+    optional Vector3 MarkPosition=25;
+    optional string MarkName=26;
+    optional float UseTimeAddTime=27;
+    optional int32 FireSelfType=28;
+    optional int32 Damage=29;
+    optional int32 CurrentHealthy=30;
+    optional int32 SaveProgress=31;
+    optional int32 FixHealthy=32;
+    optional bool NearBounds=33;
+}
+message ToolConfig
+{
+    required Vector3 position=1;
+    required Vector3 rotation=2;
+    required int32 ToolsID=3;
+    required int32 NetworkID=4;
+}
+message Vector3 {
+    required float x=1;
+    required float y=2;
+    required float z=3;
+}

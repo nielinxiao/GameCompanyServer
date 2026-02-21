@@ -1,0 +1,51 @@
+﻿[2026-02-16 22:09:14.736] [INFO] ========================================
+[2026-02-16 22:09:14.736] [INFO] GameCompany 服务端详细日志
+[2026-02-16 22:09:14.736] [INFO] 日志文件: Logs\GameServer_Detail_20260216_220914.txt
+[2026-02-16 22:09:14.736] [INFO] 开始时间: 2026-02-16 22:09:14
+[2026-02-16 22:09:14.736] [INFO] ========================================
+[2026-02-16 22:09:14.736] [INFO] 
+[2026-02-16 22:09:14.736] [INFO] LocalDataStorage 初始化开始
+[2026-02-16 22:09:14.736] [INFO] 数据目录: Data
+[2026-02-16 22:09:14.736] [INFO] 保存模式: Instant
+[2026-02-16 22:09:14.736] [INFO] 保存间隔: 24小时
+[2026-02-16 22:09:14.784] [INFO] [LocalStorage] 加载String数据成功: 1 条记录
+[2026-02-16 22:09:14.784] [INFO] [LocalStorage] Hash文件读取成功，JSON长度: 26260字符
+[2026-02-16 22:09:14.795] [INFO] [LocalStorage] JSON反序列化成功，发现 25 个顶层键
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: company, 字段数: 1, 包含block: False
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: player:FuncTestUser_20260216_A, 字段数: 3, 包含block: False
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_A, 字段数: 1, 包含block: True
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [建筑字段] Hash表: FuncTestUser_20260216_A, block长度: 139, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":3.14,"y":0.05,"z":-1.23},"quaternionJson":{"x":0.0,"y":0.0,...
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: AgentLiveTest_20260216_195514, 字段数: 1, 包含block: True
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [建筑字段] Hash表: AgentLiveTest_20260216_195514, block长度: 131, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":1.11,"y":0.05,"z":-2.22},"quaternionJson":{"x":0,"y":0,"z":...
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_Z, 字段数: 1, 包含block: True
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [建筑字段] Hash表: FuncTestUser_20260216_Z, block长度: 140, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":12.34,"y":0.05,"z":-6.78},"quaternionJson":{"x":0.0,"y":0.0...
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_204420_AI, 字段数: 1, 包含block: True
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [建筑字段] Hash表: FuncTestUser_20260216_204420_AI, block长度: 180, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":2.22,"y":0.05,"z":-3.33},"quaternionJson":{"x":0.0,"y":0.0,...
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_E1, 字段数: 1, 包含block: True
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [建筑字段] Hash表: FuncTestUser_20260216_E1, block长度: 138, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":8.88,"y":0.05,"z":9.99},"quaternionJson":{"x":0.0,"y":0.0,"...
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: player:FuncTestUser_20260216_204420_AI, 字段数: 3, 包含block: False
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: build_test_20260216_203453, 字段数: 1, 包含block: True
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [建筑字段] Hash表: build_test_20260216_203453, block长度: 254, block预览: {"builds":[{"quaternionJson":{"y":0.7071068,"w":0.7071068,"z":0,"x":0},"nameUrl":"BuildPrefab_Plane","vector3Json":{"y":...
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: player:, 字段数: 3, 包含block: False
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: player: , 字段数: 3, 包含block: False
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: player:AgentLiveTest_20260216_195514, 字段数: 3, 包含block: False
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: player:FuncTestUser_20260216_RT3, 字段数: 3, 包含block: False
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_C, 字段数: 1, 包含block: True
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [建筑字段] Hash表: FuncTestUser_20260216_C, block长度: 44, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane"}]}
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: , 字段数: 1, 包含block: False
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_RT1, 字段数: 1, 包含block: True
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [建筑字段] Hash表: FuncTestUser_20260216_RT1, block长度: 139, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":5.55,"y":0.05,"z":-7.77},"quaternionJson":{"x":0.0,"y":0.0,...
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: player:UPgCmpna6seyUOJFkbo+Fw==, 字段数: 3, 包含block: False
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: FuncTestUser_20260216_RT3, 字段数: 1, 包含block: True
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [建筑字段] Hash表: FuncTestUser_20260216_RT3, block长度: 139, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":9.91,"y":0.05,"z":-3.33},"quaternionJson":{"x":0.0,"y":0.0,...
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: player:   , 字段数: 3, 包含block: False
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: player:	, 字段数: 3, 包含block: False
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: player:  , 字段数: 3, 包含block: False
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: UPgCmpna6seyUOJFkbo+Fw==, 字段数: 5, 包含block: True
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [建筑字段] Hash表: UPgCmpna6seyUOJFkbo+Fw==, block长度: 306, block预览: {"builds":[{"nameUrl":"BuildPrefab_Plane","vector3Json":{"x":1.25,"y":0.05,"z":-2.5},"quaternionJson":{"x":0.0,"y":0.0,"...
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: player:test_user_probe, 字段数: 3, 包含block: False
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: player:AgentTest_20260216_194627, 字段数: 3, 包含block: False
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [已加载] Hash表: AgentTest_20260216_194627, 字段数: 1, 包含block: True
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage]   [建筑字段] Hash表: AgentTest_20260216_194627, block长度: 132, block预览: [{"buildName":"BuildPrefab_Plane","position":{"x":1.1,"y":0.0,"z":2.2},"rotation":{"x":0,"y":45,"z":0},"scale":{"x":1,"y...
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage] 加载Hash数据成功: 25 个Hash表（JSON顶层键: 25, 跳过: 0）
+[2026-02-16 22:09:14.796] [INFO] [LocalStorage] Hash加载建筑统计 - 含block字段Hash表: 11, 样例: FuncTestUser_20260216_A(Length=139), AgentLiveTest_20260216_195514(Length=131), FuncTestUser_20260216_Z(Length=140), FuncTestUser_20260216_204420_AI(Length=180), FuncTestUser_20260216_E1(Length=138)

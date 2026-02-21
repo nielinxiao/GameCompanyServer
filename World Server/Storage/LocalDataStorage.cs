@@ -1,0 +1,776 @@
+using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using System.Threading;
+using Newtonsoft.Json;
+using Word_Sever;
+
+namespace Word_Sever.Storage
+{
+    /// <summary>
+    /// 文件日志记录器 - 详细记录所有操作到文件
+    /// </summary>
+    internal class FileLogger
+    {
+        private readonly string _logFilePath;
+        private readonly object _writeLock = new object();
+        private readonly ConcurrentQueue<string> _logQueue;
+        private readonly Thread _writerThread;
+        private bool _isRunning;
+
+        public FileLogger(string logDirectory, string logFileName)
+        {
+            // 确保日志目录存在
+            if (!Directory.Exists(logDirectory))
+            {
+                Directory.CreateDirectory(logDirectory);
+            }
+
+            // 日志文件名包含日期时间
+            string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+            string fileNameWithTime = $"{Path.GetFileNameWithoutExtension(logFileName)}_{timestamp}.txt";
+            _logFilePath = Path.Combine(logDirectory, fileNameWithTime);
+
+            _logQueue = new ConcurrentQueue<string>();
+            _isRunning = true;
+
+            // 启动后台写入线程
+            _writerThread = new Thread(WriteLoop);
+            _writerThread.IsBackground = true;
+            _writerThread.Start();
+
+            // 写入日志头
+            LogInfo("========================================");
+            LogInfo("GameCompany 服务端详细日志");
+            LogInfo($"日志文件: {_logFilePath}");
+            LogInfo($"开始时间: {DateTime.Now:yyyy-MM-dd HH:mm:ss}");
+            LogInfo("========================================");
+            LogInfo("");
+        }
+
+        public void LogInfo(string message)
+        {
+            Log("INFO", message);
+        }
+
+        public void LogWarning(string message)
+        {
+            Log("WARN", message);
+        }
+
+        public void LogError(string message)
+        {
+            Log("ERROR", message);
+        }
+
+        private void Log(string level, string message)
+        {
+            string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
+            string logLine = $"[{timestamp}] [{level}] {message}";
+            _logQueue.Enqueue(logLine);
+        }
+
+        private void WriteLoop()
+        {
+            try
+            {
+                while (_isRunning || !_logQueue.IsEmpty)
+                {
+                    if (_logQueue.TryDequeue(out string logLine))
+                    {
+                        lock (_writeLock)
+                        {
+                            File.AppendAllText(_logFilePath, logLine + Environment.NewLine, Encoding.UTF8);
+                        }
+                    }
+                    else
+                    {
+                        Thread.Sleep(10);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[FileLogger] 写入异常: {ex.Message}");
+            }
+        }
+
+        public void Close()
+        {
+            LogInfo("");
+            LogInfo("========================================");
+            LogInfo($"结束时间: {DateTime.Now:yyyy-MM-dd HH:mm:ss}");
+            LogInfo("========================================");
+
+            _isRunning = false;
+            if (_writerThread != null && _writerThread.IsAlive)
+            {
+                _writerThread.Join(1000);
+            }
+        }
+
+        public string GetLogFilePath()
+        {
+            return _logFilePath;
+        }
+    }
+
+    /// <summary>
+    /// 保存模式枚举
+    /// </summary>
+    public enum SaveMode
+    {
+        /// <summary>
+        /// 立即保存 - 每次客户端请求都立即保存到磁盘
+        /// 优点: 数据安全，不会丢失
+        /// 缺点: 频繁IO，性能较低
+        /// </summary>
+        Instant,
+
+        /// <summary>
+        /// 定时保存 - 按照指定间隔保存到磁盘
+        /// 优点: 性能好，减少IO
+        /// 缺点: 可能丢失部分数据（最多丢失一个间隔的数据）
+        /// </summary>
+        Interval
+    }
+
+    /// <summary>
+    /// 本地JSON文件存储系统 - 替代Redis
+    /// 支持键值对存储和Hash表操作
+    /// 所有数据优先在内存中操作，根据模式定时或立即保存到磁盘
+    /// </summary>
+    public class LocalDataStorage
+    {
+        // 单键存储 - Dictionary<key, value> (内存中)
+        private ConcurrentDictionary<string, string> _stringData;
+
+        // Hash表存储 - Dictionary<key, Dictionary<field, value>> (内存中)
+        private ConcurrentDictionary<string, ConcurrentDictionary<string, string>> _hashData;
+
+        private readonly string _dataDirectory;
+        private readonly string _stringDataFile;
+        private readonly string _hashDataFile;
+
+        private DateTime _lastSaveTime;
+        private readonly int _saveIntervalHours;
+        private readonly SaveMode _saveMode;
+
+        private readonly object _saveLock = new object();
+        private bool _isDirty = false; // 标记数据是否被修改
+        private FileLogger _fileLogger; // 文件日志记录器
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="dataDirectory">数据目录</param>
+        /// <param name="saveMode">保存模式：Instant立即保存 / Interval定时保存</param>
+        /// <param name="saveIntervalHours">定时保存间隔（小时），仅在Interval模式下有效</param>
+        public LocalDataStorage(string dataDirectory, SaveMode saveMode = SaveMode.Interval, int saveIntervalHours = 24)
+        {
+            _dataDirectory = dataDirectory;
+            _stringDataFile = Path.Combine(dataDirectory, "string_data.json");
+            _hashDataFile = Path.Combine(dataDirectory, "hash_data.json");
+            _saveMode = saveMode;
+            _saveIntervalHours = saveIntervalHours;
+            _lastSaveTime = DateTime.Now;
+
+            _stringData = new ConcurrentDictionary<string, string>();
+            _hashData = new ConcurrentDictionary<string, ConcurrentDictionary<string, string>>();
+
+            // 确保目录存在
+            if (!Directory.Exists(dataDirectory))
+            {
+                Directory.CreateDirectory(dataDirectory);
+            }
+
+            // 初始化文件日志记录器
+            _fileLogger = new FileLogger("Logs", "GameServer_Detail");
+            _fileLogger.LogInfo($"LocalDataStorage 初始化开始");
+            _fileLogger.LogInfo($"数据目录: {_dataDirectory}");
+            _fileLogger.LogInfo($"保存模式: {_saveMode}");
+            _fileLogger.LogInfo($"保存间隔: {_saveIntervalHours}小时");
+
+            // 启动时从磁盘加载数据到内存
+            LoadFromDisk();
+
+            // 初始化默认值（如果不存在）
+            InitializeDefaultValues();
+
+            // 输出当前保存模式和时间信息
+            string modeDesc = _saveMode == SaveMode.Instant
+                ? "立即保存模式（每次请求都保存）"
+                : $"定时保存模式（每{_saveIntervalHours}小时保存一次）";
+            LogInfo($"[LocalStorage] ==========================================");
+            LogInfo($"[LocalStorage] 保存模式: {modeDesc}");
+            LogInfo($"[LocalStorage] 初始化时间: {_lastSaveTime}");
+            LogInfo($"[LocalStorage] 保存间隔: {_saveIntervalHours}小时 = {_saveIntervalHours * 60}分钟 = {_saveIntervalHours * 3600}秒");
+            LogInfo($"[LocalStorage] 数据目录: {_dataDirectory}");
+            LogInfo($"[LocalStorage] String文件: {_stringDataFile}");
+            LogInfo($"[LocalStorage] Hash文件: {_hashDataFile}");
+            LogInfo($"[LocalStorage] ==========================================");
+        }
+
+        #region 单键操作 (String Operations)
+
+        /// <summary>
+        /// 设置键值对（立即保存到内存，根据模式决定是否立即写入磁盘）
+        /// </summary>
+        public void StringSet(string key, string value)
+        {
+            string logMessage = $"StringSet 调用 - Key: {key}, Value长度: {value?.Length ?? 0}";
+            LogInfo($"[LocalStorage] {logMessage}");
+            _fileLogger?.LogInfo($"[LocalStorage] {logMessage}");
+            _fileLogger?.LogInfo($"  Value内容: {(value?.Length > 200 ? value.Substring(0, 200) + "..." : value)}");
+
+            // 1. 立即保存到内存
+            _stringData[key] = value;
+            _isDirty = true; // 标记数据已修改
+
+            logMessage = $"StringSet 写入内存成功 - Key: {key}, 内存中共有 {_stringData.Count} 个String键";
+            LogInfo($"[LocalStorage] {logMessage}");
+            _fileLogger?.LogInfo($"[LocalStorage] {logMessage}");
+
+            // 2. 如果是立即保存模式，立即写入磁盘
+            if (_saveMode == SaveMode.Instant)
+            {
+                logMessage = "立即保存模式 - 准备调用 SaveToDisk()";
+                LogInfo($"[LocalStorage] {logMessage}");
+                _fileLogger?.LogInfo($"[LocalStorage] {logMessage}");
+                SaveToDisk();
+            }
+            else
+            {
+                logMessage = "定时保存模式 - 已设置脏标记，等待定时保存";
+                LogInfo($"[LocalStorage] {logMessage}");
+                _fileLogger?.LogInfo($"[LocalStorage] {logMessage}");
+            }
+        }
+
+        /// <summary>
+        /// 获取键的值（优先从内存中读取）
+        /// </summary>
+        public string StringGet(string key)
+        {
+            // 直接从内存中读取，不访问磁盘
+            return _stringData.TryGetValue(key, out var value) ? value : null;
+        }
+
+        /// <summary>
+        /// 检查键是否存在
+        /// </summary>
+        public bool KeyExists(string key)
+        {
+            return _stringData.ContainsKey(key) || _hashData.ContainsKey(key);
+        }
+
+        /// <summary>
+        /// 删除键
+        /// </summary>
+        public bool KeyDelete(string key)
+        {
+            bool result1 = _stringData.TryRemove(key, out _);
+            bool result2 = _hashData.TryRemove(key, out _);
+            return result1 || result2;
+        }
+
+        #endregion
+
+        #region Hash操作 (Hash Operations)
+
+        /// <summary>
+        /// 设置Hash表的字段值（立即保存到内存，根据模式决定是否立即写入磁盘）
+        /// </summary>
+        public void HashSet(string key, string field, string value)
+        {
+            LogInfo($"[LocalStorage] HashSet 调用 - Key: {key}, Field: {field}, Value长度: {value?.Length ?? 0}");
+
+            // 1. 立即保存到内存
+            var hash = _hashData.GetOrAdd(key, k => new ConcurrentDictionary<string, string>());
+            hash[field] = value;
+            _isDirty = true; // 标记数据已修改
+
+            int fieldCount = hash.Count;
+            LogInfo($"[LocalStorage] HashSet 写入内存成功 - Key: {key}, Field: {field}, 该Hash表有 {fieldCount} 个字段, 内存中共有 {_hashData.Count} 个Hash表");
+
+            // 2. 如果是立即保存模式，立即写入磁盘
+            if (_saveMode == SaveMode.Instant)
+            {
+                LogInfo($"[LocalStorage] 立即保存模式 - 准备调用 SaveToDisk()");
+                SaveToDisk();
+            }
+            else
+            {
+                LogInfo($"[LocalStorage] 定时保存模式 - 已设置脏标记，等待定时保存");
+            }
+        }
+
+        /// <summary>
+        /// 获取Hash表的字段值（优先从内存中读取）
+        /// </summary>
+        public string HashGet(string key, string field)
+        {
+            // 直接从内存中读取，不访问磁盘
+            if (_hashData.TryGetValue(key, out var hash))
+            {
+                return hash.TryGetValue(field, out var value) ? value : null;
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// 获取Hash表的所有字段和值
+        /// </summary>
+        public Dictionary<string, string> HashGetAll(string key)
+        {
+            if (_hashData.TryGetValue(key, out var hash))
+            {
+                return new Dictionary<string, string>(hash);
+            }
+            return new Dictionary<string, string>();
+        }
+
+        /// <summary>
+        /// 删除Hash表的字段
+        /// </summary>
+        public bool HashDelete(string key, string field)
+        {
+            if (_hashData.TryGetValue(key, out var hash))
+            {
+                return hash.TryRemove(field, out _);
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// 检查Hash表的字段是否存在
+        /// </summary>
+        public bool HashExists(string key, string field)
+        {
+            if (_hashData.TryGetValue(key, out var hash))
+            {
+                return hash.ContainsKey(field);
+            }
+            return false;
+        }
+
+        #endregion
+
+        #region 持久化操作 (Persistence)
+
+        /// <summary>
+        /// 从磁盘加载数据
+        /// </summary>
+        private void LoadFromDisk()
+        {
+            try
+            {
+                string logMsg;
+
+                // 加载String数据（使用UTF-8编码）
+                if (File.Exists(_stringDataFile))
+                {
+                    var json = File.ReadAllText(_stringDataFile, Encoding.UTF8);
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+                    if (data != null)
+                    {
+                        _stringData = new ConcurrentDictionary<string, string>(data);
+                        logMsg = $"[LocalStorage] 加载String数据成功: {_stringData.Count} 条记录";
+                        LogInfo(logMsg);
+                        _fileLogger?.LogInfo(logMsg);
+
+                        // 列出所有加载的键
+                        foreach (var key in _stringData.Keys)
+                        {
+                            var valueLen = _stringData[key]?.Length ?? 0;
+                            logMsg = $"[LocalStorage]   - Key: {key}, Value长度: {valueLen}";
+                            LogInfo(logMsg);
+                            _fileLogger?.LogInfo(logMsg);
+                        }
+                    }
+                }
+                else
+                {
+                    logMsg = "[LocalStorage] String数据文件不存在，创建新的数据";
+                    LogInfo(logMsg);
+                    _fileLogger?.LogInfo(logMsg);
+                }
+
+                // 加载Hash数据（使用UTF-8编码）
+                if (File.Exists(_hashDataFile))
+                {
+                    var json = File.ReadAllText(_hashDataFile, Encoding.UTF8);
+                    logMsg = $"[LocalStorage] Hash文件读取成功，JSON长度: {json.Length}字符";
+                    LogInfo(logMsg);
+                    _fileLogger?.LogInfo(logMsg);
+
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, string>>>(json);
+                    if (data != null)
+                    {
+                        logMsg = $"[LocalStorage] JSON反序列化成功，发现 {data.Count} 个Hash表";
+                        LogInfo(logMsg);
+                        _fileLogger?.LogInfo(logMsg);
+
+                        // 先列出JSON中所有的Hash表名称
+                        foreach (var key in data.Keys)
+                        {
+                            logMsg = $"[LocalStorage]   [JSON中] Hash表: {key}, 字段数: {data[key].Count}";
+                            LogInfo(logMsg);
+                            _fileLogger?.LogInfo(logMsg);
+                        }
+
+                        // 重新初始化_hashData字典
+                        _hashData = new ConcurrentDictionary<string, ConcurrentDictionary<string, string>>();
+
+                        // 将JSON数据加载到内存
+                        foreach (var kvp in data)
+                        {
+                            if (kvp.Value != null)
+                            {
+                                _hashData[kvp.Key] = new ConcurrentDictionary<string, string>(kvp.Value);
+                                logMsg = $"[LocalStorage]   [已加载] Hash表: {kvp.Key}, 字段数: {_hashData[kvp.Key].Count}";
+                                LogInfo(logMsg);
+                                _fileLogger?.LogInfo(logMsg);
+                            }
+                            else
+                            {
+                                logMsg = $"[LocalStorage]   [跳过] Hash表: {kvp.Key}, 原因: Value为null";
+                                LogWarning(logMsg);
+                                _fileLogger?.LogWarning(logMsg);
+                            }
+                        }
+
+                        logMsg = $"[LocalStorage] 加载Hash数据成功: {_hashData.Count} 个Hash表（JSON中有 {data.Count} 个）";
+                        LogInfo(logMsg);
+                        _fileLogger?.LogInfo(logMsg);
+
+                        // 最终验证：列出内存中所有加载的Hash表
+                        logMsg = "[LocalStorage] === 内存中的Hash表最终列表 ===";
+                        LogInfo(logMsg);
+                        _fileLogger?.LogInfo(logMsg);
+                        foreach (var key in _hashData.Keys)
+                        {
+                            logMsg = $"[LocalStorage]   - Hash表: {key}, 字段数: {_hashData[key].Count}";
+                            LogInfo(logMsg);
+                            _fileLogger?.LogInfo(logMsg);
+                        }
+                    }
+                    else
+                    {
+                        logMsg = "[LocalStorage] JSON反序列化失败: data为null";
+                        LogError(logMsg);
+                        _fileLogger?.LogError(logMsg);
+                    }
+                }
+                else
+                {
+                    logMsg = "[LocalStorage] Hash数据文件不存在，创建新的数据";
+                    LogInfo(logMsg);
+                    _fileLogger?.LogInfo(logMsg);
+                }
+            }
+            catch (Exception ex)
+            {
+                string errMsg = $"[LocalStorage] 加载数据失败: {ex.Message}";
+                LogError(errMsg);
+                _fileLogger?.LogError(errMsg);
+            }
+        }
+
+        /// <summary>
+        /// 保存数据到磁盘
+        /// </summary>
+        public void SaveToDisk()
+        {
+            LogInfo($"[LocalStorage] === SaveToDisk 开始 ===");
+            LogInfo($"[LocalStorage] 脏标记: {_isDirty}, 保存模式: {_saveMode}");
+            LogInfo($"[LocalStorage] 内存数据统计 - String: {_stringData.Count}条, Hash: {_hashData.Count}个");
+
+            _fileLogger?.LogInfo("[LocalStorage] ====================================");
+            _fileLogger?.LogInfo("[LocalStorage] SaveToDisk 开始");
+            _fileLogger?.LogInfo($"[LocalStorage]   脏标记: {_isDirty}");
+            _fileLogger?.LogInfo($"[LocalStorage]   保存模式: {_saveMode}");
+            _fileLogger?.LogInfo($"[LocalStorage]   String键数: {_stringData.Count}");
+            _fileLogger?.LogInfo($"[LocalStorage]   Hash表数: {_hashData.Count}");
+
+            lock (_saveLock)
+            {
+                try
+                {
+                    LogInfo($"[LocalStorage] 准备序列化数据...");
+
+                    // JSON序列化设置：保持中文字符不转义
+                    var jsonSettings = new JsonSerializerSettings
+                    {
+                        Formatting = Formatting.Indented,
+                        StringEscapeHandling = StringEscapeHandling.Default
+                    };
+
+                    // 保存String数据（使用UTF-8编码，不带BOM）
+                    LogInfo($"[LocalStorage] 序列化String数据... ({_stringData.Count}条)");
+                    var stringJson = JsonConvert.SerializeObject(_stringData, jsonSettings);
+                    LogInfo($"[LocalStorage] String JSON长度: {stringJson.Length}字符");
+
+                    LogInfo($"[LocalStorage] 写入String文件: {_stringDataFile}");
+                    File.WriteAllText(_stringDataFile, stringJson, new UTF8Encoding(false));
+
+                    // 验证文件是否真的被写入
+                    if (File.Exists(_stringDataFile))
+                    {
+                        var fileInfo = new FileInfo(_stringDataFile);
+                        LogInfo($"[LocalStorage] String文件写入成功 - 大小: {fileInfo.Length}字节, 修改时间: {fileInfo.LastWriteTime}");
+                    }
+                    else
+                    {
+                        LogError($"[LocalStorage] String文件写入后不存在！");
+                    }
+
+                    // 保存Hash数据（使用UTF-8编码，不带BOM）
+                    LogInfo($"[LocalStorage] 序列化Hash数据... ({_hashData.Count}个Hash表)");
+                    var hashDict = new Dictionary<string, Dictionary<string, string>>();
+                    foreach (var kvp in _hashData)
+                    {
+                        hashDict[kvp.Key] = new Dictionary<string, string>(kvp.Value);
+                        LogInfo($"[LocalStorage]   - Hash表 '{kvp.Key}': {kvp.Value.Count}个字段");
+                    }
+                    var hashJson = JsonConvert.SerializeObject(hashDict, jsonSettings);
+                    LogInfo($"[LocalStorage] Hash JSON长度: {hashJson.Length}字符");
+
+                    LogInfo($"[LocalStorage] 写入Hash文件: {_hashDataFile}");
+                    File.WriteAllText(_hashDataFile, hashJson, new UTF8Encoding(false));
+
+                    // 验证文件是否真的被写入
+                    if (File.Exists(_hashDataFile))
+                    {
+                        var fileInfo = new FileInfo(_hashDataFile);
+                        LogInfo($"[LocalStorage] Hash文件写入成功 - 大小: {fileInfo.Length}字节, 修改时间: {fileInfo.LastWriteTime}");
+                    }
+                    else
+                    {
+                        LogError($"[LocalStorage] Hash文件写入后不存在！");
+                    }
+
+                    _lastSaveTime = DateTime.Now;
+                    _isDirty = false; // 清除脏标记
+                    LogInfo($"[LocalStorage] >>> 数据保存成功 - String: {_stringData.Count}条, Hash: {_hashData.Count}个 <<<");
+                    LogInfo($"[LocalStorage] 清除脏标记，更新保存时间: {_lastSaveTime}");
+                    LogInfo($"[LocalStorage] === SaveToDisk 结束 ===");
+
+                    _fileLogger?.LogInfo($"[LocalStorage]   >>> 数据保存成功 <<<");
+                    _fileLogger?.LogInfo($"[LocalStorage]   更新保存时间: {_lastSaveTime}");
+                    _fileLogger?.LogInfo("[LocalStorage] ====================================");
+                }
+                catch (Exception ex)
+                {
+                    LogError($"[LocalStorage] !!! 保存数据失败 !!!");
+                    LogError($"[LocalStorage] 异常类型: {ex.GetType().Name}");
+                    LogError($"[LocalStorage] 异常消息: {ex.Message}");
+                    LogError($"[LocalStorage] 堆栈跟踪: {ex.StackTrace}");
+
+                    _fileLogger?.LogError($"[LocalStorage] !!! 保存数据失败 !!!");
+                    _fileLogger?.LogError($"[LocalStorage]   异常类型: {ex.GetType().Name}");
+                    _fileLogger?.LogError($"[LocalStorage]   异常消息: {ex.Message}");
+                    _fileLogger?.LogError($"[LocalStorage]   堆栈跟踪: {ex.StackTrace}");
+                }
+            }
+        }
+
+        /// <summary>
+        /// 检查是否需要自动保存（仅在Interval模式下有效）
+        /// 如果数据被修改，按照指定间隔保存
+        /// 如果数据未修改，不保存
+        /// </summary>
+        public void CheckAutoSave()
+        {
+            // 立即保存模式不需要检查，因为已经在Set时立即保存了
+            if (_saveMode == SaveMode.Instant)
+            {
+                // 不打印日志，避免每帧都输出
+                return;
+            }
+
+            var now = DateTime.Now;
+            var timeSinceLastSave = now - _lastSaveTime;
+
+            // 数据未修改，不需要保存
+            if (!_isDirty)
+            {
+                // 每10秒打印一次状态，避免日志过多
+                if (timeSinceLastSave.TotalSeconds >= 10 && (int)timeSinceLastSave.TotalSeconds % 10 == 0)
+                {
+                    LogInfo($"[LocalStorage] CheckAutoSave - 数据未修改，不需要保存 (距上次保存: {timeSinceLastSave.TotalHours:F2}小时)");
+                }
+                return;
+            }
+
+            // 打印详细的时间调试信息
+            LogInfo($"[LocalStorage] --- CheckAutoSave 时间检查 ---");
+            LogInfo($"[LocalStorage] 当前时间: {now}");
+            LogInfo($"[LocalStorage] 上次保存: {_lastSaveTime}");
+            LogInfo($"[LocalStorage] 距上次保存: {timeSinceLastSave.TotalHours:F4}小时 ({timeSinceLastSave.TotalMinutes:F2}分钟, {timeSinceLastSave.TotalSeconds:F1}秒)");
+            LogInfo($"[LocalStorage] 保存间隔配置: {_saveIntervalHours}小时");
+            LogInfo($"[LocalStorage] 脏标记: {_isDirty}");
+            LogInfo($"[LocalStorage] 是否需要保存: {timeSinceLastSave.TotalHours >= _saveIntervalHours}");
+
+            // 按照配置的间隔保存（小时）
+            if (timeSinceLastSave.TotalHours >= _saveIntervalHours)
+            {
+                LogInfo($"[LocalStorage] [OK] 达到保存间隔，触发定时保存");
+                SaveToDisk();
+            }
+            else
+            {
+                double remainingHours = _saveIntervalHours - timeSinceLastSave.TotalHours;
+                LogInfo($"[LocalStorage] [WAIT] 未达到保存间隔，还需等待 {remainingHours:F4}小时 ({remainingHours * 60:F2}分钟)");
+            }
+            LogInfo($"[LocalStorage] --- CheckAutoSave 检查结束 ---");
+        }
+
+        /// <summary>
+        /// 强制立即保存
+        /// </summary>
+        public void ForceSave()
+        {
+            LogInfo("[LocalStorage] 强制保存数据");
+            _fileLogger?.LogInfo("[LocalStorage] 强制保存数据 - 服务器关闭");
+            SaveToDisk();
+
+            // 关闭文件日志
+            if (_fileLogger != null)
+            {
+                _fileLogger.Close();
+                string logPath = _fileLogger.GetLogFilePath();
+                LogInfo($"[LocalStorage] 详细日志已保存到: {logPath}");
+            }
+        }
+
+        #endregion
+
+        #region 默认值初始化
+
+        /// <summary>
+        /// 初始化系统默认值
+        /// </summary>
+        private void InitializeDefaultValues()
+        {
+            try
+            {
+                // 初始化利率（如果不存在）- 默认5%
+                if (StringGet("money") == null)
+                {
+                    StringSet("money", "0.05");
+                    LogInfo("[LocalStorage] 初始化默认利率: 0.05 (5%)");
+                }
+
+                // 可以在这里添加更多默认值初始化
+                // 例如：股票列表、游戏配置等
+            }
+            catch (Exception ex)
+            {
+                LogError($"[LocalStorage] 初始化默认值失败: {ex.Message}");
+            }
+        }
+
+        #endregion
+
+        #region 统计信息
+
+        /// <summary>
+        /// 获取String键数量
+        /// </summary>
+        public int GetStringKeyCount()
+        {
+            return _stringData.Count;
+        }
+
+        /// <summary>
+        /// 获取Hash表数量
+        /// </summary>
+        public int GetHashKeyCount()
+        {
+            return _hashData.Count;
+        }
+
+        /// <summary>
+        /// 获取所有String键
+        /// </summary>
+        public List<string> GetAllStringKeys()
+        {
+            return new List<string>(_stringData.Keys);
+        }
+
+        /// <summary>
+        /// 获取所有Hash键
+        /// </summary>
+        public List<string> GetAllHashKeys()
+        {
+            return new List<string>(_hashData.Keys);
+        }
+
+        /// <summary>
+        /// 获取当前保存模式
+        /// </summary>
+        public SaveMode GetSaveMode()
+        {
+            return _saveMode;
+        }
+
+        /// <summary>
+        /// 获取保存间隔（小时）
+        /// </summary>
+        public int GetSaveIntervalHours()
+        {
+            return _saveIntervalHours;
+        }
+
+        #endregion
+
+        #region 日志方法
+
+        private void LogInfo(string message)
+        {
+            if (OpenProgress.Instance?.log != null)
+            {
+                OpenProgress.Instance.log.LogGreen(message);
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] {message}");
+                Console.ResetColor();
+            }
+        }
+
+        private void LogWarning(string message)
+        {
+            if (OpenProgress.Instance?.log != null)
+            {
+                OpenProgress.Instance.log.LogYellow(message);
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] {message}");
+                Console.ResetColor();
+            }
+        }
+
+        private void LogError(string message)
+        {
+            if (OpenProgress.Instance?.log != null)
+            {
+                OpenProgress.Instance.log.LogError(message);
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] {message}");
+                Console.ResetColor();
+            }
+        }
+
+        #endregion
+    }
+}

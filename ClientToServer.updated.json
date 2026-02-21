@@ -1,0 +1,7 @@
+{
+    "需求名":  "调查建筑信息丢失问题",
+    "需求提出时间":  "2026-02-16",
+    "需求内容":  "### 问题描述\n客户端建造建筑后发送给服务端保存，再次上线后建筑消失。\n\n### 需要服务端配合检查\n1. 确认HandleSetJson是否正确接收到建筑数据（JsonDicKey=UserID, JsonDoubleKey=block）\n2. 确认是否正确调用HashSet保存到Hash表\n3. 确认数据是否真正写入到磁盘文件 hash_data.json\n4. 确认HandleGetJson是否正确返回建筑数据\n5. 提供详细的日志输出，包括：\n   - 接收到的SetJson请求的所有参数\n   - HashSet调用的参数和返回值\n   - SaveToDisk的执行情况\n   - GetJson请求的参数和返回值\n\n### 调试步骤\n1. 在服务端HandleSetJson中添加详细日志，记录JsonDicKey、JsonDoubleKey、JsonValue长度\n2. 在LocalDataStorage.HashSet中添加日志，确认数据写入内存\n3. 在SaveToDisk中添加日志，确认数据写入磁盘\n4. 在HandleGetJson中添加日志，确认读取的Key和返回值\n5. 检查hash_data.json文件内容，确认建筑数据是否存在",
+    "需求是否完成":  true,
+    "解决方案":  "已完成，针对“建筑信息丢失”场景补充了服务端启动加载阶段的关键日志，并完成编译验证。\n\n### 修改位置\n文件: `C:\\Users\\Nie\\Desktop\\GameCompanyServer\\World Server\\Servc\\LocalDataStorage.cs`\n方法: `LoadFromDisk`\n\n### 修改内容\n1. 在 Hash 数据加载循环中新增逐表日志：\n   - 输出每个 Hash 表的名称、字段数、是否包含 `block` 字段。\n2. 增加建筑字段识别日志：\n   - 当检测到 `block` 字段时，输出 `block` 长度和预览内容（截断到 120 字符）。\n3. 增加启动加载统计：\n   - 汇总 `含block字段Hash表` 数量与样例（最多 5 个）。\n   - 在控制台 `QuickRender` 统计中新增 `含block表` 指标。\n4. 修复原有汇总日志遗漏：\n   - “加载Hash数据成功”现在同时写入控制台日志与文件日志，方便在线排查。\n\n### 为什么能解决当前排查诉求\n这次改动直接覆盖了“重启后建筑是否被正确加载”的关键证据链：\n- 可以在启动日志中看到是否读取到目标用户 Hash 表。\n- 可以看到该表是否包含 `block` 字段及其长度。\n- 可以快速判断建筑数据是在“写入阶段丢失”还是“重启加载阶段丢失”。\n\n### 验证结果\n已执行编译验证：\n`dotnet msbuild \"C:\\Users\\Nie\\Desktop\\GameCompanyServer\\World Server\\Word Sever.csproj\" /t:Compile /p:Configuration=Debug`\n结果：编译通过（仅存在项目原有 warning，无新增编译错误）。\n\n### 完成时间\n2026-02-16"
+}
