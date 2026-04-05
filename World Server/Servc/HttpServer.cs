@@ -454,6 +454,8 @@ namespace Word_Sever
                 case "/api/data/get":
                     string getKey = request.Data?.ContainsKey("jsonDoubleKey") == true
                         ? request.Data["jsonDoubleKey"].ToString()
+                        : request.Data?.ContainsKey("jsonDicKey") == true
+                        ? request.Data["jsonDicKey"].ToString()
                         : request.Data?.ContainsKey("jsonKey")== true
                         ? request.Data["jsonKey"].ToString()
                         : "unknown";

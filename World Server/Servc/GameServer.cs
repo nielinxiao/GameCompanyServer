@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using IOCP;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Word_Sever;
 using Word_Sever.Storage;
 
@@ -357,6 +360,14 @@ namespace Word_Sever.Servc
                         buildingVerifyDetail = verifyDetail ?? "(空)";
                         _log.LogGreen($"[GameServer] Building GetJson disk-check - Found: {persistedFound}, IsMatchMemory: {diskMatchMemory}, Detail: {verifyDetail}, HashDataFile: {hashDataFilePath}");
                     }
+                }
+                else if (!string.IsNullOrEmpty(effectiveJsonDicKey))
+                {
+                    Dictionary<string, string> hashValues = _storage.HashGetAll(effectiveJsonDicKey);
+                    value = JsonConvert.SerializeObject(hashValues ?? new Dictionary<string, string>());
+                    int fieldCount = hashValues?.Count ?? 0;
+                    logMsg = $"[GameServer] GetJson HashAll - Key: {effectiveJsonDicKey}, FieldCount: {fieldCount}, Length: {value.Length}";
+                    _log.LogGreen(logMsg);
                 }
                 else if (!string.IsNullOrEmpty(msg.JsonKey))
                 {
@@ -1352,6 +1363,20 @@ namespace Word_Sever.Servc
                         }
                     };
                 }
+                else if (!string.IsNullOrEmpty(effectiveJsonDicKey))
+                {
+                    Dictionary<string, string> hashValues = _storage.HashGetAll(effectiveJsonDicKey);
+                    value = JsonConvert.SerializeObject(hashValues ?? new Dictionary<string, string>());
+                    return new GetJsonResult
+                    {
+                        Message = hashValues != null && hashValues.Count > 0 ? "获取成功" : "数据不存在",
+                        Data = new
+                        {
+                            jsonValue = value,
+                            jsonDicKey = effectiveJsonDicKey
+                        }
+                    };
+                }
                 else if (!string.IsNullOrEmpty(jsonKey))
                 {
                     // String操作: StringGet(jsonKey)
@@ -1553,19 +1578,141 @@ namespace Word_Sever.Servc
 
                 _log.LogGreen($"[GameServer] HTTP BuyStock - 玩家: {playerId}, 股票: {stockCompany}({stockId}), 数量: {stockAmount}");
 
-                var playerStockKey = $"player_stock:{playerId}";
-                var currentStockJson = _storage.HashGet(playerStockKey, stockId);
-
-                int currentAmount = 0;
-                if (!string.IsNullOrEmpty(currentStockJson))
+                if (string.IsNullOrEmpty(playerId) || string.IsNullOrEmpty(stockId) || stockAmount <= 0)
                 {
-                    int.TryParse(currentStockJson, out currentAmount);
+                    return new GetJsonResult
+                    {
+                        Success = false,
+                        Message = "购买失败: 请求参数无效",
+                        Data = new { allowBuyStock = false }
+                    };
                 }
 
-                int newAmount = currentAmount + stockAmount;
-                _storage.HashSet(playerStockKey, stockId, newAmount.ToString());
+                JObject buyerCompany = LoadCompanyForStock(playerId);
+                JObject targetCompany = LoadCompanyForStock(stockId);
+                if (buyerCompany == null || targetCompany == null)
+                {
+                    return new GetJsonResult
+                    {
+                        Success = false,
+                        Message = "购买失败: 公司数据不存在",
+                        Data = new { allowBuyStock = false }
+                    };
+                }
 
-                _log.LogGreen($"[GameServer] 购买成功 - 原持股: {currentAmount}, 新持股: {newAmount}");
+                bool isListed = targetCompany["isListed"]?.Value<bool>() ?? false;
+                if (!isListed)
+                {
+                    return new GetJsonResult
+                    {
+                        Success = false,
+                        Message = "购买失败: 该公司尚未上市",
+                        Data = new { allowBuyStock = false }
+                    };
+                }
+
+                string targetCompanyName = targetCompany["CompName"]?.ToString() ?? stockCompany;
+
+                if (playerId == stockId)
+                {
+                    JObject companyOwnerHolding = EnsurePortfolioEntry(targetCompany, stockId, targetCompanyName);
+                    int companyOwnerShares = GetInt(companyOwnerHolding["Much"], 0);
+                    int totalShares = Math.Max(1, GetInt(targetCompany["TotalShares"], 10000));
+                    int maxBuybackAmount = Math.Max(0, totalShares - companyOwnerShares);
+                    if (stockAmount > maxBuybackAmount)
+                    {
+                        return new GetJsonResult
+                        {
+                            Success = false,
+                            Message = $"购买失败: 最多只能回购{maxBuybackAmount}股流通股",
+                            Data = new
+                            {
+                                allowBuyStock = false,
+                                currentAmount = companyOwnerShares,
+                                maxBuybackAmount = maxBuybackAmount
+                            }
+                        };
+                    }
+
+                    float companyCurrentPrice = CalculateStockPrice(targetCompany);
+                    float companyTotalCost = (float)Math.Round(companyCurrentPrice * stockAmount, 2);
+                    float companyBuyerMoney = GetFloat(targetCompany["All_saveMoney"], 0f);
+                    if (companyBuyerMoney < companyTotalCost)
+                    {
+                        return new GetJsonResult
+                        {
+                            Success = false,
+                            Message = "购买失败: 公司资金不足",
+                            Data = new { allowBuyStock = false }
+                        };
+                    }
+
+                    int companyNewAmount = companyOwnerShares + stockAmount;
+                    companyOwnerHolding["Much"] = companyNewAmount;
+                    targetCompany["All_saveMoney"] = Math.Max(0f, companyBuyerMoney - companyTotalCost);
+                    RecordCurrentStockPrice(targetCompany);
+                    SaveCompanyForStock(stockId, targetCompany);
+
+                    _log.LogGreen($"[GameServer] 回购成功 - 原库存股: {companyOwnerShares}, 新库存股: {companyNewAmount}, 成交价: {companyCurrentPrice}, 总价: {companyTotalCost}");
+
+                    return new GetJsonResult
+                    {
+                        Message = $"回购成功! 当前库存股: {companyNewAmount}股",
+                        Data = new
+                        {
+                            allowBuyStock = true,
+                            newAmount = companyNewAmount,
+                            stockMoney = companyTotalCost,
+                            maxBuybackAmount = Math.Max(0, totalShares - companyNewAmount)
+                        }
+                    };
+                }
+
+                JObject ownerHolding = EnsurePortfolioEntry(targetCompany, stockId, targetCompanyName);
+                int ownerShares = GetInt(ownerHolding["Much"], 0);
+                if (ownerShares < stockAmount)
+                {
+                    return new GetJsonResult
+                    {
+                        Success = false,
+                        Message = "购买失败: 当前可售股不足",
+                        Data = new
+                        {
+                            allowBuyStock = false,
+                            currentAmount = ownerShares
+                        }
+                    };
+                }
+
+                float currentPrice = CalculateStockPrice(targetCompany);
+                float totalCost = (float)Math.Round(currentPrice * stockAmount, 2);
+                float buyerMoney = GetFloat(buyerCompany["All_saveMoney"], 0f);
+                if (buyerMoney < totalCost)
+                {
+                    return new GetJsonResult
+                    {
+                        Success = false,
+                        Message = "购买失败: 公司资金不足",
+                        Data = new { allowBuyStock = false }
+                    };
+                }
+
+                ownerHolding["Much"] = ownerShares - stockAmount;
+                JObject buyerHolding = EnsurePortfolioEntry(buyerCompany, stockId, targetCompanyName);
+                int currentAmount = GetInt(buyerHolding["Much"], 0);
+                int newAmount = currentAmount + stockAmount;
+                buyerHolding["Much"] = newAmount;
+                buyerHolding["CompanyName"] = targetCompanyName;
+
+                buyerCompany["All_saveMoney"] = Math.Max(0f, buyerMoney - totalCost);
+                targetCompany["All_saveMoney"] = GetFloat(targetCompany["All_saveMoney"], 0f) + totalCost;
+                RecordCurrentStockPrice(buyerCompany);
+                RecordCurrentStockPrice(targetCompany);
+
+                SaveCompanyForStock(playerId, buyerCompany);
+                SaveCompanyForStock(stockId, targetCompany);
+
+                _log.LogGreen($"[GameServer] 购买成功 - 原持股: {currentAmount}, 新持股: {newAmount}, 成交价: {currentPrice}, 总价: {totalCost}");
 
                 return new GetJsonResult
                 {
@@ -1573,7 +1720,8 @@ namespace Word_Sever.Servc
                     Data = new
                     {
                         allowBuyStock = true,
-                        newAmount = newAmount
+                        newAmount = newAmount,
+                        stockMoney = totalCost
                     }
                 };
             }
@@ -1604,37 +1752,94 @@ namespace Word_Sever.Servc
 
                 _log.LogGreen($"[GameServer] HTTP SellStock - 玩家: {playerId}, 股票: {stockCompany}({stockId}), 数量: {stockAmount}");
 
-                var playerStockKey = $"player_stock:{playerId}";
-                var currentStockJson = _storage.HashGet(playerStockKey, stockId);
-
-                int currentAmount = 0;
-                if (!string.IsNullOrEmpty(currentStockJson))
+                if (string.IsNullOrEmpty(playerId) || string.IsNullOrEmpty(stockId) || stockAmount <= 0)
                 {
-                    int.TryParse(currentStockJson, out currentAmount);
-                }
-
-                bool allowSell = currentAmount >= stockAmount;
-
-                if (allowSell)
-                {
-                    int newAmount = currentAmount - stockAmount;
-                    _storage.HashSet(playerStockKey, stockId, newAmount.ToString());
-                    _log.LogGreen($"[GameServer] 出售成功 - 原持股: {currentAmount}, 新持股: {newAmount}");
-
                     return new GetJsonResult
                     {
-                        Message = $"出售成功! 当前持有{stockCompany}股票: {newAmount}股",
+                        Success = false,
+                        Message = "出售失败: 请求参数无效",
                         Data = new
                         {
-                            allowBuyStock = true,
-                            newAmount = newAmount
+                            allowBuyStock = false
                         }
                     };
                 }
-                else
+
+                JObject sellerCompany = LoadCompanyForStock(playerId);
+                JObject targetCompany = LoadCompanyForStock(stockId);
+                if (sellerCompany == null || targetCompany == null)
+                {
+                    return new GetJsonResult
+                    {
+                        Success = false,
+                        Message = "出售失败: 公司数据不存在",
+                        Data = new { allowBuyStock = false }
+                    };
+                }
+
+                bool isListed = targetCompany["isListed"]?.Value<bool>() ?? false;
+                if (!isListed)
+                {
+                    return new GetJsonResult
+                    {
+                        Success = false,
+                        Message = "出售失败: 该公司尚未上市",
+                        Data = new { allowBuyStock = false }
+                    };
+                }
+
+                string targetCompanyName = targetCompany["CompName"]?.ToString() ?? stockCompany;
+
+                if (playerId == stockId)
+                {
+                    JObject companyOwnerHolding = EnsurePortfolioEntry(targetCompany, stockId, targetCompanyName);
+                    int companyCurrentAmount = GetInt(companyOwnerHolding["Much"], 0);
+                    int totalShares = Math.Max(1, GetInt(targetCompany["TotalShares"], 10000));
+                    int minKeepShares = (int)Math.Ceiling(totalShares * 0.5f);
+                    int maxSellableAmount = Math.Max(0, companyCurrentAmount - minKeepShares);
+                    if (stockAmount > maxSellableAmount)
+                    {
+                        return new GetJsonResult
+                        {
+                            Success = false,
+                            Message = $"出售失败: 库存股最多只能卖出{maxSellableAmount}股，且必须保留至少50%股份",
+                            Data = new
+                            {
+                                allowBuyStock = false,
+                                currentAmount = companyCurrentAmount,
+                                maxSellableAmount = maxSellableAmount
+                            }
+                        };
+                    }
+
+                    float companyCurrentPrice = CalculateStockPrice(targetCompany);
+                    float companyTotalIncome = (float)Math.Round(companyCurrentPrice * stockAmount, 2);
+                    int companyNewAmount = companyCurrentAmount - stockAmount;
+                    companyOwnerHolding["Much"] = companyNewAmount;
+                    targetCompany["All_saveMoney"] = GetFloat(targetCompany["All_saveMoney"], 0f) + companyTotalIncome;
+                    RecordCurrentStockPrice(targetCompany);
+                    SaveCompanyForStock(stockId, targetCompany);
+
+                    _log.LogGreen($"[GameServer] 库存股出售成功 - 原持股: {companyCurrentAmount}, 新持股: {companyNewAmount}, 成交价: {companyCurrentPrice}, 融资金额: {companyTotalIncome}");
+
+                    return new GetJsonResult
+                    {
+                        Message = $"出售成功! 当前库存股剩余{companyNewAmount}股",
+                        Data = new
+                        {
+                            allowBuyStock = true,
+                            newAmount = companyNewAmount,
+                            stockMoney = companyTotalIncome,
+                            maxSellableAmount = Math.Max(0, companyNewAmount - minKeepShares)
+                        }
+                    };
+                }
+
+                JObject sellerHolding = FindPortfolioEntry(sellerCompany, stockId);
+                int currentAmount = GetInt(sellerHolding?["Much"], 0);
+                if (sellerHolding == null || currentAmount < stockAmount)
                 {
                     _log.LogYellow($"[GameServer] 出售失败 - 持股不足: {currentAmount} < {stockAmount}");
-
                     return new GetJsonResult
                     {
                         Success = false,
@@ -1646,6 +1851,45 @@ namespace Word_Sever.Servc
                         }
                     };
                 }
+
+                float currentPrice = CalculateStockPrice(targetCompany);
+                float totalIncome = (float)Math.Round(currentPrice * stockAmount, 2);
+                float targetCompanyMoney = GetFloat(targetCompany["All_saveMoney"], 0f);
+                if (targetCompanyMoney < totalIncome)
+                {
+                    return new GetJsonResult
+                    {
+                        Success = false,
+                        Message = "出售失败: 对方公司资金不足以回购",
+                        Data = new { allowBuyStock = false }
+                    };
+                }
+
+                int newAmount = currentAmount - stockAmount;
+                sellerHolding["Much"] = newAmount;
+                JObject ownerHolding = EnsurePortfolioEntry(targetCompany, stockId, targetCompanyName);
+                ownerHolding["Much"] = GetInt(ownerHolding["Much"], 0) + stockAmount;
+
+                sellerCompany["All_saveMoney"] = GetFloat(sellerCompany["All_saveMoney"], 0f) + totalIncome;
+                targetCompany["All_saveMoney"] = Math.Max(0f, targetCompanyMoney - totalIncome);
+                RecordCurrentStockPrice(sellerCompany);
+                RecordCurrentStockPrice(targetCompany);
+
+                SaveCompanyForStock(playerId, sellerCompany);
+                SaveCompanyForStock(stockId, targetCompany);
+
+                _log.LogGreen($"[GameServer] 出售成功 - 原持股: {currentAmount}, 新持股: {newAmount}, 成交价: {currentPrice}, 总价: {totalIncome}");
+
+                return new GetJsonResult
+                {
+                    Message = $"出售成功! 当前持有{stockCompany}股票: {newAmount}股",
+                    Data = new
+                    {
+                        allowBuyStock = true,
+                        newAmount = newAmount,
+                        stockMoney = totalIncome
+                    }
+                };
             }
             catch (Exception ex)
             {
@@ -1672,20 +1916,17 @@ namespace Word_Sever.Servc
 
                 _log.LogGreen($"[GameServer] HTTP SearchStock - 关键词: {searchKeyword}");
 
-                var stockListKey = "stock_list";
-                var stockListJson = _storage.StringGet(stockListKey);
-
-                if (string.IsNullOrEmpty(stockListJson) || stockListJson == "null" || stockListJson == "{}")
-                {
-                    stockListJson = "[]";
-                }
+                JObject matchedCompany = FindCompanyByName(searchKeyword);
+                string matchedStockJson = matchedCompany != null
+                    ? BuildStockShop(matchedCompany).ToString(Formatting.None)
+                    : string.Empty;
 
                 return new GetJsonResult
                 {
                     Message = "搜索完成",
                     Data = new
                     {
-                        jsonStock = stockListJson
+                        jsonStock = matchedStockJson
                     }
                 };
             }
@@ -1694,6 +1935,261 @@ namespace Word_Sever.Servc
                 _log.LogError($"[GameServer] HandleSearchStockHttp异常: {ex.Message}");
                 throw;
             }
+        }
+
+        private JObject FindCompanyByName(string searchKeyword)
+        {
+            string normalizedKeyword = searchKeyword?.Trim() ?? string.Empty;
+            if (string.IsNullOrEmpty(normalizedKeyword))
+            {
+                return null;
+            }
+
+            Dictionary<string, string> companies = _storage.HashGetAll("company");
+            if (companies == null || companies.Count == 0)
+            {
+                return null;
+            }
+
+            JObject partialMatch = null;
+            try
+            {
+                foreach (KeyValuePair<string, string> pair in companies)
+                {
+                    if (string.IsNullOrWhiteSpace(pair.Value) || pair.Value == "null")
+                    {
+                        continue;
+                    }
+
+                    JObject company = JObject.Parse(pair.Value);
+                    NormalizeCompanyStockData(company);
+                    string companyName = company["CompName"]?.ToString() ?? string.Empty;
+                    if (companyName.Equals(normalizedKeyword, StringComparison.OrdinalIgnoreCase))
+                    {
+                        return company;
+                    }
+
+                    if (partialMatch == null &&
+                        companyName.IndexOf(normalizedKeyword, StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        partialMatch = company;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                _log.LogError($"[GameServer] 股票搜索解析失败: {ex.Message}");
+            }
+
+            return partialMatch;
+        }
+
+        private JObject LoadCompanyForStock(string playerId)
+        {
+            string companyJson = _storage.HashGet("company", playerId);
+            if (string.IsNullOrWhiteSpace(companyJson) || companyJson == "null")
+            {
+                return null;
+            }
+
+            JObject company = JObject.Parse(companyJson);
+            NormalizeCompanyStockData(company);
+            return company;
+        }
+
+        private void SaveCompanyForStock(string playerId, JObject company)
+        {
+            NormalizeCompanyStockData(company);
+            RecordCurrentStockPrice(company);
+            _storage.HashSet("company", playerId, company.ToString(Formatting.None));
+        }
+
+        private void NormalizeCompanyStockData(JObject company)
+        {
+            if (company == null)
+            {
+                return;
+            }
+
+            if (company["stocks"] == null || company["stocks"].Type != JTokenType.Array)
+            {
+                company["stocks"] = new JArray();
+            }
+
+            if (company["StockPriceHistory"] == null || company["StockPriceHistory"].Type != JTokenType.Array)
+            {
+                company["StockPriceHistory"] = new JArray();
+            }
+
+            if (GetInt(company["TotalShares"], 0) <= 0)
+            {
+                company["TotalShares"] = 10000;
+            }
+
+            if (company["isListed"] == null)
+            {
+                company["isListed"] = false;
+            }
+
+            string companyId = company["CEO_ID"]?.ToString() ?? string.Empty;
+            string companyName = company["CompName"]?.ToString() ?? string.Empty;
+            if (!string.IsNullOrEmpty(companyId) && !string.IsNullOrEmpty(companyName))
+            {
+                JObject ownHolding = FindPortfolioEntry(company, companyId);
+                if (ownHolding == null)
+                {
+                    ((JArray)company["stocks"]).Add(new JObject
+                    {
+                        ["Much"] = GetInt(company["TotalShares"], 10000),
+                        ["CompanyName"] = companyName,
+                        ["playerID"] = companyId
+                    });
+                }
+                else
+                {
+                    ownHolding["CompanyName"] = companyName;
+                    if (GetInt(ownHolding["Much"], 0) < 0)
+                    {
+                        ownHolding["Much"] = 0;
+                    }
+                }
+            }
+        }
+
+        private JObject FindPortfolioEntry(JObject company, string stockCompanyId)
+        {
+            JArray portfolio = company?["stocks"] as JArray;
+            if (portfolio == null)
+            {
+                return null;
+            }
+
+            foreach (JToken token in portfolio)
+            {
+                if (token is JObject item &&
+                    string.Equals(item["playerID"]?.ToString(), stockCompanyId, StringComparison.Ordinal))
+                {
+                    return item;
+                }
+            }
+
+            return null;
+        }
+
+        private JObject EnsurePortfolioEntry(JObject company, string stockCompanyId, string companyName)
+        {
+            JObject item = FindPortfolioEntry(company, stockCompanyId);
+            if (item != null)
+            {
+                item["CompanyName"] = companyName;
+                return item;
+            }
+
+            item = new JObject
+            {
+                ["Much"] = 0,
+                ["CompanyName"] = companyName,
+                ["playerID"] = stockCompanyId
+            };
+            ((JArray)company["stocks"]).Add(item);
+            return item;
+        }
+
+        private JObject BuildStockShop(JObject company)
+        {
+            NormalizeCompanyStockData(company);
+            RecordCurrentStockPrice(company);
+
+            string companyId = company["CEO_ID"]?.ToString() ?? string.Empty;
+            string companyName = company["CompName"]?.ToString() ?? string.Empty;
+            int totalShares = GetInt(company["TotalShares"], 10000);
+            float currentPrice = CalculateStockPrice(company);
+            JObject ownerHolding = EnsurePortfolioEntry(company, companyId, companyName);
+            int ownerShares = GetInt(ownerHolding["Much"], 0);
+            JArray historySource = company["StockPriceHistory"] as JArray ?? new JArray();
+            JArray history = new JArray();
+            foreach (JToken token in historySource)
+            {
+                history.Add(GetFloat(token, currentPrice));
+            }
+
+            if (history.Count == 0)
+            {
+                history.Add(currentPrice);
+            }
+
+            return new JObject
+            {
+                ["CompanyName"] = companyName,
+                ["playerID"] = companyId,
+                ["Much"] = ownerShares,
+                ["Money"] = currentPrice,
+                ["SaveMoney"] = history,
+                ["IsListed"] = company["isListed"]?.Value<bool>() ?? false,
+                ["TotalShares"] = totalShares,
+                ["OwnerShares"] = ownerShares
+            };
+        }
+
+        private float CalculateStockPrice(JObject company)
+        {
+            float allSaveMoney = GetFloat(company["All_saveMoney"], 0f);
+            float lendMoney = GetFloat(company["LendMoney"], 0f);
+            int totalShares = Math.Max(1, GetInt(company["TotalShares"], 10000));
+            float valuation = Math.Max(1000f, allSaveMoney * 1.2f - lendMoney * 0.8f);
+            return Math.Max(0.1f, valuation / totalShares);
+        }
+
+        private void RecordCurrentStockPrice(JObject company)
+        {
+            JArray history = company["StockPriceHistory"] as JArray;
+            if (history == null)
+            {
+                history = new JArray();
+                company["StockPriceHistory"] = history;
+            }
+
+            float currentPrice = CalculateStockPrice(company);
+            float lastPrice = history.Count > 0 ? GetFloat(history[history.Count - 1], currentPrice) : float.MinValue;
+            if (history.Count == 0 || Math.Abs(lastPrice - currentPrice) > 0.0001f)
+            {
+                history.Add(currentPrice);
+            }
+
+            while (history.Count > 30)
+            {
+                history.RemoveAt(0);
+            }
+        }
+
+        private int GetInt(JToken token, int defaultValue)
+        {
+            if (token == null)
+            {
+                return defaultValue;
+            }
+
+            if (int.TryParse(token.ToString(), out int result))
+            {
+                return result;
+            }
+
+            return defaultValue;
+        }
+
+        private float GetFloat(JToken token, float defaultValue)
+        {
+            if (token == null)
+            {
+                return defaultValue;
+            }
+
+            if (float.TryParse(token.ToString(), out float result))
+            {
+                return result;
+            }
+
+            return defaultValue;
         }
 
         /// <summary>
